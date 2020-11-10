@@ -1,0 +1,84 @@
+/* 
+ * File:   main.c
+ * Author: LAB3
+ *
+ * Created on September 18, 2019, 3:51 PM
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(int argc, char** argv) {
+    int a[50],n;
+    int luachon,j,tg, i;
+    int max=0, min=9999;
+    book:
+        printf("\n==========CHUONG TRINH==========\n");
+        printf("1.Nhap so phan tu mang va gia tri cho cac phan tu\n");
+        printf("2.In mang vua nhap\n");
+        printf("3.Tim gia tri lon nhat va nho nhat trong mag\n");
+        printf("4.Sap xep mang giam dan\n");
+        printf("5.Thoat\n");
+        printf("Lua chon cua ban:");
+        scanf("%d",&luachon);
+    switch(luachon){
+        case 1:
+            printf("Nhap so phan tu n:");
+            scanf("%d",&n);
+            for(i=0;i<n;i++){
+                printf("Gia tri cac phan tu mang:[%d]=",i);
+                scanf("%d",&a[i]);
+            }
+            goto book;
+            break;
+        case 2:
+            printf("Mang vua nhap la: ");
+            for(i=0;i<n;i++){
+                printf("%5d",a[i]);
+            }
+            goto book;
+            break;
+        case 3:                   
+            for(i=0;i<n;i++){
+                if(a[i]>max){
+                   max=a[i];
+                }
+                
+            }
+            printf("Phan tu lon nhat:%d\n",max); 
+            for(i=0;i<n;i++){
+                if(a[i]<min){
+                    min=a[i];                   
+                }                 
+            }
+            printf("Phan tu nho nhat:%d\n",min);          
+            goto book;
+            break;
+        case 4:
+            printf("mang truoc khi sap xep:\n");
+            for(i=0;i<n;i++){
+                printf("%5d",a[i]);
+            }
+            for(i=0;i<n-1;i++){
+                for(j=i+1;j<n;j++){
+                    if(a[i]<a[j]){
+                        tg=a[i];
+                        a[i]=a[j];
+                        a[j]=tg;
+                    }
+                }
+            }
+            printf("\nMang da sap xep:");
+            for(i=0;i<n;i++){
+                printf("%4d",a[i]);
+            }
+            goto book;
+            break;
+        case 5:
+            printf("Thoat");
+            exit(0);
+            
+    }
+}
+

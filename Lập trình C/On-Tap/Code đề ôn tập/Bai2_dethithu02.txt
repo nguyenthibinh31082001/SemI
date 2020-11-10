@@ -1,0 +1,76 @@
+/* 
+ * File:   main.c
+ * Author: LAB3
+ *
+ * Created on September 20, 2019, 4:42 PM
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdlib.h>
+struct Student{
+    int ID;
+    char name[50];
+    char phone[20];
+};
+struct Student sv[100];
+int menu=0,n,i;
+FILE *fp;
+int main(int argc, char** argv) {
+    do{
+        printf("\n============MENU CHUONG TRINH=============\n");
+        printf("\n1: Nhap so luong sinh vien va nhap thong tin cac sinh vien\n");
+        printf("\n2: Hien thi thong tin sinh vien vua nhap\n");
+        printf("\n3: Ghi thong tin sinh vien vao file\n");
+        printf("\n4: Thoat chuong trinh\n");  
+        if(menu==0){
+           printf("Moi ban chon:");
+           scanf("%d",&menu);
+           while(menu!=1){
+               printf("\nMoi ban chon 1 de bat dau:");
+               scanf("%d",&menu);
+           }
+        }else{
+            printf("lua chon tiep theo cua ban la:");
+            scanf("%d",&menu);
+        }
+        switch(menu){
+            case 1:
+                printf("\nnhap so luong sv:");
+                scanf("%d",&n);
+                printf("\nNHAP THONG TIN SV");
+                for(i=0;i<n;i++){
+                    printf("\n\tNhap thong sv %d",i+1);
+                    printf("\n\tID");
+                    scanf("%d",&sv[i].ID);
+                    printf("\n\tName");
+                    scanf("%s",&sv[i].name);
+                    printf("\n\tPhone");
+                    scanf("%s",&sv[i].phone);
+                }
+                break;
+            case 2:
+                 printf("\nTHONG TIN SINH VIEN THEO CAU TRUC DA NHAP");
+                 for(i=0;i<n;i++){
+                     printf("\nSINHVIEN%d=>\t\tID:%d\tName:%s\tPhone:%s",i+1,sv[i].ID,sv[i].name,sv[i].phone);
+                     
+                 }
+                 break;
+            case 3:
+                fp=fopen("Student.txt","w+");
+                for(i=0;i<n;i++){
+                    fprintf(fp,"\nSINHVIEN%d=>\t\tID:%5dName:%10sPhone:%20s",i+1,sv[i].ID,sv[i].name,sv[i].phone);
+                    
+                }
+                break;
+            case 4:
+                exit(0);
+            default:
+                printf("\nMoi ban chon tu 1 den 4");
+        }
+    }while(1==1);
+    getch();
+    
+}
+

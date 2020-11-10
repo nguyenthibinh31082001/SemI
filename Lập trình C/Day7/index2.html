@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// i=0;
+		// while(i<=10){
+		// 	document.write("Đây là vòng lắp thứ " + i +"<br />");
+		// 	i++;
+		// }
+		// i=0;
+		// do{
+		// 	i++;
+		// 	document.write(i +"<br />");
+		// }while(i<=10);
+
+		// for(i=0;i<=10;i++){
+		// 	document.write("6 x " + i + " = " + (6*i) +"<br />");
+		// }
+
+		// //mang mot chieu
+
+		// var mang = new Array(1,"Nguyen Van A",22);
+		// alert(mang[1]);
+		// mang[3] = "nam";
+		// mang[4] = "hà Nội";
+
+		// alert(mang[3]);
+
+		// for(i=0;i<mang.length;i++){
+		// 	document.write(mang[i] +"<br />");
+		// }
+
+
+		mang1 = new Array(1,"Nguyễn văn A","Long Biên");
+		mang2 = new Array(2,"Nguyễn văn B","Long Biên1");
+		mang3 = new Array(3,"Nguyễn văn C","Long Biên2");
+		mang4 = new Array(4,"Nguyễn văn D","Long Biên3");
+
+		mang2chieu = new Array(mang1,mang2,mang3,mang4);
+
+		// alert(mang2chieu[2][1]);
+
+		txtTable = "<table width='500' border='1'>";
+		txtTable += "<tr><th>#</th><th>Họ Tên</th><th>Địa chỉ</th></tr>";
+
+		for(i=0;i<4;i++){
+			txtTable +="<tr>";
+			for(j=0;j<3;j++){
+				txtTable +="<td>"+mang2chieu[i][j] +"</td>";
+			}
+			txtTable +="</tr>";
+		}
+
+		txtTable += "</table>";
+		document.write(txtTable);
+
+		txtTable = "<table width='500' border='1'>";
+		txtTable += "<tr><th>#</th><th>Họ Tên</th><th>Địa chỉ</th></tr>";
+
+		for(i in mang2chieu){
+			txtTable +="<tr>";
+			for(j in mang2chieu[i]){
+				txtTable +="<td>"+mang2chieu[i][j] +"</td>";
+			}
+			txtTable +="</tr>";
+		}
+
+		txtTable += "</table>";
+		document.write(txtTable);
+	</script>
+</body>
+</html>

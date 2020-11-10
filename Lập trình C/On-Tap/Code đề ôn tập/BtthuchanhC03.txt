@@ -1,0 +1,105 @@
+/* 
+ * File:   main.c
+ * Author: LAB3
+ *
+ * Created on September 20, 2019, 2:23 PM
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+int songuyento(int x){
+    if(x<2){
+        return 0;
+    }
+    for( int i=2;i<x;i++){
+        if(x%i==0){
+            return 0;
+        }
+    }
+    return 1;
+}
+int main(int argc, char** argv) {
+    FILE *f;
+    int chon,n,i,x,j,tg;
+    int a[50];
+    book:
+        printf("1.Khai bao so phan tu mang va nhap so phan tu mang\n"); 
+        printf("2.In cac gia tri vua nhap\n");
+        printf("3.In cac phan tu mang la so nguyen to\n"); 
+        printf("4.In cac phan tu mang chia het cho 3 va 4\n");
+        printf("5.Sap xep mang tang dan\n");
+        printf("6.Ghi mang da sap xep vao file co ten la demo.txt\n");
+        printf("7.Thoat\n");
+        printf("Nhap lua chon cua ban:");
+        scanf("%d",&chon);
+        switch(chon){
+            case 1:
+                printf("Nhap so luong phan tu mang:");
+                scanf("%d",&n);
+                for(i=0;i<n;i++){
+                    printf("So phan tu mang a[%d]=",i);
+                    scanf("%d",&a[i]);
+                }
+                goto book;
+                break;
+            case 2:
+                printf("mang vua nhap la:\n");
+                for(i=0;i<n;i++){
+                    printf("%5d\n",a[i]);
+                }
+                goto book;
+                break;
+            case 3:
+             printf("cac phan tu la so nguyen to trong mang:%d\n",i);
+             songuyento(x);
+             goto book;
+             break;
+            case 4:
+                for(i=0;i<n;i++){
+                    if(a[i]%3==0&&a[i]%4==0){
+                        printf("Cac phan tu chia het cho 3 va 4:%d\n",a[i]);
+                    }
+                }
+                goto book;
+                break;  
+            case 5:
+                printf("Mang truoc khi sap xep la:\n");
+                for(i=0;i<n;i++){
+                    printf("%5d",a[i]);
+                }
+                for(i=0;i<n-1;i++){
+                    for(j=i+1;j<n;j++){
+                        if(a[i]>a[j]){
+                            tg=a[i];
+                            a[i]=a[j];
+                            a[j]=tg;
+                    }                  
+                }
+                }
+                    printf("\nMang da sap xep la:");
+                    for(i=0;i<n;i++){
+                        printf("%5d",a[i]);
+                    }
+                    goto book;
+                    break;
+            case 6:              
+                f=fopen("demo.txt","wt");
+                fprintf(f,"%d",n);
+                for(i=0;i<n;i++){
+                    fprintf(f,"%3d",a[i]);
+                    fclose(f);
+                }
+                printf("\nKet qua doc file:\n");
+                for(i=0;i<n;i++){
+                    printf("%3d\n",a[i]);
+                }
+                goto book;
+                break;
+            case 7:
+                exit(0);
+            default:
+                printf("Moi ban chon tu 1den 4");
+        
+}
+}
+

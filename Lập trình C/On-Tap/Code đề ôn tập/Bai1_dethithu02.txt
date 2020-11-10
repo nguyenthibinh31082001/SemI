@@ -1,0 +1,81 @@
+/* 
+ * File:   main.c
+ * Author: LAB3
+ *
+ * Created on September 20, 2019, 3:49 PM
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+ * 
+ */
+int main(int argc, char** argv) {
+    int chon,i,j, n,m,t=0;
+    int a[50][50];
+    book:
+        printf("\n======CHUONG TRINH======\n");
+        printf("1.Nhap so phan tu mang va gia tri cac phan tu\n");
+        printf("2.In mang vua nhap\n");
+        printf("3.In mang voi cac gia tri tren bien\n");
+        printf("4.Tinh tong cac gia tri tren duong cheo chinh\n");
+        printf("5.Thoat\n");
+        printf("Lua chon cua ban:");
+        scanf("%d",&chon);
+    switch(chon){
+            case 1:
+                printf("Nhap so phan tu mang:");
+                scanf("%d",&n);
+                printf("Nhap cot m:");
+                scanf("%d",&m);
+                printf("Nhap hang n:");
+                scanf("%d",&n);
+                for(i=0;i<m;i++){
+                    for(j=0;j<n;j++){
+                    printf("Nhap phan tu a[%d][%d]=",i,j);
+                    scanf("%d",&a[i][j]);
+                }
+                }
+                goto book;
+                break;
+        case 2:
+            for(i=0;i<m;i++){
+                for(j=0;j<n;j++){
+                 printf("%4d",a[i][j]);  
+                }
+                printf("\n");
+            }
+            goto book;
+            break;
+        case 3:
+            for(i=0;i<m;i++){
+                for(j=0;j<n;j++){
+                    if(i==0||j==0||i==(n-1)||j==(n-1)){
+                        printf("%3d",a[i][j]);
+                    }else{
+                        printf("   ");
+                    }
+               
+                }
+                printf("\n");
+            }
+            goto book;
+            break;
+        case 4:
+            for(i=0;i<m;i++){
+                for(j=0;j<n;j++){
+                    if(i==j){
+                        t=t+a[i][j];
+                    }
+                }
+            }
+            printf("Tong gia tri tren duong cheo chinh:%d",t);
+            goto book;
+            break;
+        case 5:
+            printf("Thoat\n");
+            break;
+        }
+}
+

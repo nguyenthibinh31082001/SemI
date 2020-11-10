@@ -1,0 +1,35 @@
+/* 
+ * File:   main.c
+ * Author: LAB3
+ *
+ * Created on September 16, 2019, 4:04 PM
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int doichu(char chuoi[]){
+    int i,n,b;
+    n=strlen(chuoi);
+    for(i=0;i<n;i++){
+    if(chuoi[i]>='A'&&chuoi[i]<='Z') {
+        b=0;
+    }else{
+        b=1;
+    }
+      
+}
+    if(b==0){
+        printf("Chuoi la chu hoa\n");
+    }else{
+        printf("Chuoi la chu thuong\n");
+    }
+}
+
+int main(int argc, char** argv) {
+    char chuoi[50];
+    printf("Nhap chuoi:");
+    gets(chuoi);
+    doichu(chuoi);
+}
+
