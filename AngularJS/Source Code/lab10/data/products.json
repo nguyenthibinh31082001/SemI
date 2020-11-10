@@ -1,0 +1,27 @@
+[
+    {
+        "id":1,
+        "name" : "Temporibus dolor deleniti",
+        "price": 100000,
+        "image":"images/sp1.jpg"
+    },
+    {
+        "id":2,
+        "name" : "Lorem ipsum dolor sit amet",
+        "price": 200000,
+        "image":"images/sp1.jpg"
+    },
+    {
+        "id":3,
+        "name" : "Ad molestias maxime provident",
+        "price": 300000,
+        "image":"images/sp1.jpg"
+    },
+    {
+        "id":4,
+        "name" : "Consectetur adipisicing elit",
+        "price": 400000,
+        "image":"images/sp1.jpg"
+    }
+    
+]

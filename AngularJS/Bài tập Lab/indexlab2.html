@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="demoapp" ng-controller="AppController">
+<head>
+ <meta charset="utf-8">
+ <title>indexlab2</title>
+ <link rel="stylesheet"href="bootstrap/css/bootstrap.min.css">
+ <script src="angular/angular.min.js"></script>
+</head>
+<body>
+	 <div class="container">
+		 <div class="col-md-6">
+			 <h2>Danh sách sinh viên</h2>
+			 <ul class="list-group">
+			 <li class="list-group-item" ng-repeat="hs in hocsinh">
+			 {{hs}}
+			 </li>
+			 </ul>
+		 </div>
+	 </div>
+</body>
+<script>
+	var app = angular.module('demoapp',[]);
+	app.controller('AppController',function($scope){
+	 $scope.hocsinh = [
+	 'Hoàng Văn Thụ',
+	 'Nguyễn Hoàng Anh',
+	 'Trần Văn Ngọc',
+	 'TIết Đinh San',
+	 'Phàn Lê Huê',
+	 'Trần Kim Định'
+	 ];
+	});
+</script>
+</html>

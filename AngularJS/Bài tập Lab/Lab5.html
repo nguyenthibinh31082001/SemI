@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Lab5</title>
+	<!-- Local bootstrap CSS & JS -->
+	<link rel="stylesheet" media="screen" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body ng-controller="myController">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-3">
+				<table class="table table-bordered">
+					<tr>
+						<th>STT</th>
+						<th>Tên sản phẩm</th>
+						<th>Ảnh</th>
+						<th>Giá</th>
+						<th>Giá khuyến mãi</th>
+						<th>Tỷ lệ % giảm giá</th>
+					</tr>
+					<tr ng-repeat="sp in sanpham">
+						<td>{{$index +1}}</td>
+						<td>{{sp.ten}}</td>
+						<td><img ng-src="{{sp.image}}" style="width:100%"/></td>
+						<td>{{sp.gia}}</td>
+						<td>{{sp.khuyenmai}}</td>
+						<td>{{sp.tyle}}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="jquery/jquery-3.4.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="angular/angular.min.js"></script>
+<script src="angular/angular-route.min.js"></script>
+<script>
+	var app = angular.module('myApp',[]);
+	app.controller('myController', function($scope){
+		$scope.sanpham = [
+			{
+				"ten":"sản phẩm 1",
+				"image":"images/anh1.jpg",
+				"gia":15000,
+				"khuyenmai":10000,
+				"tyle":"33%"
+			},
+			{
+				"ten":"sản phẩm 2",
+				"image":"images/anh1.jpg",
+				"gia":15000,
+				"khuyenmai":10000,
+				"tyle":"33%"
+			},
+			{
+				"ten":"sản phẩm 3",
+				"image":"images/anh1.jpg",
+				"gia":15000,
+				"khuyenmai":10000,
+				"tyle":"33%"
+			},
+			{
+				"ten":"sản phẩm 4",
+				"image":"images/anh1.jpg",
+				"gia":15000,
+				"khuyenmai":10000,
+				"tyle":"33%"
+			}
+		];
+	});
+</script>
+</html>

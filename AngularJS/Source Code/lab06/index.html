@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="AppCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo angular JS App</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4">
+            <form action="" method="POST" name="MyForm">
+                <legend>Form Đăng nhập</legend>
+                <div class="form-group">
+                    <label for="">Dịa chỉ email</label>
+                    <input type="email" class="form-control" name="email" required ng-model="login_email" placeholder="NHập địa chỉ email">
+                    <div class="help-block" ng-if="MyForm.email.$dirty">
+                        <div class="error" ng-if="MyForm.email.$error.required">
+                            <span class="glyphicon glyphicon-remove"></span> Địa chỉ email không được để trống
+                        </div>
+                        <div class="error" ng-if="MyForm.email.$error.email">
+                            <span class="glyphicon glyphicon-remove"></span> Địa chỉ email không đúng định dạng
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Mật khẩu</label>
+                    <input type="password" class="form-control" name="password" required ng-model="login_pass" placeholder="NHập mật khẩu">
+                    <div class="help-block" ng-if="MyForm.password.$dirty">
+                        <div class="error" ng-if=" MyForm.password.$error.required ">
+                            <span class="glyphicon glyphicon-remove"></span> Mật khẩu không được để tróng
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" ng-disabled="MyForm.email.$error.required || MyForm.email.$error.email || MyForm.password.$error.required">Login now</button>
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>

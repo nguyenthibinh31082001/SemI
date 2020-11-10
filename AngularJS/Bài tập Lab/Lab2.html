@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Lab 2</title>
+	<!-- Local bootstrap CSS & JS -->
+	<link rel="stylesheet" media="screen" href="bootstrap/css/bootstrap.min.css">
+	<script src="jquery/jquery-3.4.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body ng-controller="myController">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<table class="table table-bordered">
+					<tr>
+						<th>STT</th>
+						<th>Tên sản phẩm</th>
+						<th>Giá</th>
+						<th></th>
+					</tr>
+					<tr ng-repeat="item in listItem">
+						<td>{{$index +1}}</td>
+						<td>{{item.tensanpham}}</td>
+						<td>{{item.gia}}</td>
+						<td><a href="#" class="btn btn-primary" ng-click="show_chitiet(item)">Chi tiết</a></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<h2>Danh sách sản phẩm</h2>
+			<div class="col-md-3" ng-repeat="sp in listItem">
+				<div class="thumbnail">
+					<img ng-src="{{sp.hinhanh}}" alt="">
+					<div class="tieude">
+						<h3>{{sp.tensanpham}}</h3>
+						<h5>Giá: {{sp.gia | currency:"":0}} đ </h5>
+						<p><a href="#" class="btn btn-primary" ng-click="show_chitiet(sp)">Chi tiết</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal-id">
+		 <div class="modal-dialog">
+			 <div class="modal-content">
+				 <div class="modal-header"> 	
+				 	<h2 class="modal-title">Thông tin sản phẩm</h2>
+				 </div>
+				 <div class="modal-body">
+				 	<div class="row">
+				 		<div class="col-md-3">
+				 			<img ng-src="{{listItemInfo.hinhanh}}" style="width:100%"/>
+				 		</div>
+				 		<div class="col-md-9">
+				 			<h4>{{listItemInfo.tensanpham}}</h4>
+				 			<h5>Giá: {{listItemInfo.gia | currency:"":0}} đ </h5>
+				 		</div>
+				 	</div>
+				 </div>
+			 </div>
+		 </div>
+	 </div>
+</body>
+<script src="angular/angular.min.js"></script> 
+<script>
+	var app = angular.module('myApp',[]);
+	app.controller('myController',['$scope', function($scope){
+		$scope.listItem = [
+			{
+				"tensanpham":"Sản phẩm 1",
+				"gia":"30000",
+				"hinhanh":"images/anh1.jpg"
+			},
+			{
+				"tensanpham":"Sản phẩm 2",
+				"gia":"30000",
+				"hinhanh":"images/anh1.jpg"
+			},
+			{
+				"tensanpham":"Sản phẩm 3",
+				"gia":"30000",
+				"hinhanh":"images/anh1.jpg"
+			},
+			{
+				"tensanpham":"Sản phẩm 4",
+				"gia":"30000",
+				"hinhanh":"images/anh1.jpg"
+			},
+		];
+		$scope.show_chitiet = function(listItem){
+			$('#modal-id').modal('show');
+			$scope.listItemInfo = listItem;
+		}
+	}]);
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="movieapp" ng-controller="AppController">
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo angularjs app</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+     <!-- AngularJS -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/movie.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Danh sách phim</h2>
+            </div>
+            <div class="col-md-3" ng-repeat="mv in movies">
+                <div class="thumbnail">
+                    <img ng-src="{{mv.Poster}}" alt="">
+                    <div class="caption text-center">
+                        <h3>{{mv.Name}}</h3>
+                        <!-- Sử dụng ng-click để gọi hàm hiển thị modal chi tiết một movie
+                        hàm show_movie(mv) có biến mv là đối tượng các movie đã duyệt trên ng-repeat -->
+                        <a href="" class="btn btn-sm btn-primary" ng-click="show_movie(mv)">
+                            <span class="glyphicon glyphicon-play"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="modal-id">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Movie info</h4>
+                </div>
+                <div class="modal-body">
+                    <img ng-src="{{movieInfo.Poster}}" style="width:100%"/>
+                    <h3>{{movieInfo.Name}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

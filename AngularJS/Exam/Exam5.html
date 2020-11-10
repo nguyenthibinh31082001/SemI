@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Exam5</title>
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap.min.css" >
+	<script src="jquery/jquery-3.4.1.min.js"></script>
+	<script src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+	<script src="angular/angular.min.js"></script>
+	<script src="angular/angular-route.min.js"></script>
+</head>
+<body ng-controller="mainCtrl">
+	<!-- include file menu nav.html -->
+<nav class="navbar navbar-inverse" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#!">Trang chủ</a></li>
+				<li class="active"><a href="#!favorite">Yêu thích</a></li>
+			</ul>
+			<!-- <ul class="nav navbar-nav navbar-right">
+				<li><a href="#">abc@gmail.com</a></li>
+			</ul> -->
+		</div><!-- /.navbar-collapse -->
+	</div>
+</nav>
+	<div class="container" >
+		<div ng-view></div>
+<div class="panel panel-defaut">
+	<div class="panel-heading">
+		<h3 class="panel-title">Danh sách videos</h3>
+	</div>
+	<div class="panel-body">
+		<input type="text" ng-model="tim_kiem" class="form-control" placeholder="Nhập tên..">
+	</div>
+	<div class="col-md-3 | filter:tim_kiem" >
+		<div class="thumbnail">
+			<img ng-src="" alt="">
+			<div class="caption text-center">
+				<h3>movie Name</h3>
+				<p>
+					<button type="button" ng-disabled="check_inFavorite(p.id)" class="btn btn-xs btn-danger" >
+						<a href="favorite5.html"><span class="glyphicon glyphicon-heart"></span></a>
+					</button>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+
+	
+</body>
+</html>

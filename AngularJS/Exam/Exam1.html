@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Exam1</title>
+	<!-- Local bootstrap CSS & JS -->
+	<link rel="stylesheet" media="screen" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body ng-controller="myController">
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#!">Trang chủ</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">abc@gmail.com</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</nav>
+	<!-- include file menu nav.html -->
+	<div class="container" >
+		<div class="col-md-9">
+			<div ng-view></div>
+			<div class="panel panel-defaut">
+				<div class="panel-heading">
+					<h3 class="panel-title">Danh sách sinh viên</h3>
+				</div>
+				<div class="panel-body">
+					<input type="text" placeholder="Tìm kiếm sinh viên" class="form-control" ng-model="tim_kiem"/>
+				</div>
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>STT</th>
+							<th>Họ và tên</th>
+							<th>Địa chỉ email</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody >
+						<tr ng-repeat="ds in danhsach | filter:tim_kiem">
+							<td>{{$index +1}}</td>
+							<td>{{ds.name}}</td>
+							<td>{{ds.email}}</td>
+							<td>
+								<a class="btn btn-primary" ng-click="show_xem(ds)"> Chi tiết </a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Đăng nhập hệ thống</h3>
+				</div>
+				<div class="panel-body">
+					<form action="" method="POST" role="form">
+					
+						<div class="form-group">
+							<label for="">Tên đăng nhập</label>
+							<input type="text" class="form-control" ng-model="username" placeholder="Tên đăng nhập">
+						</div>
+						<div class="form-group">
+							<label for="">Mật khẩu</label>
+							<input type="password" class="form-control" ng-model="password" placeholder="Mật khẩu">
+						</div>
+						
+					
+						<button type="button" class="btn btn-primary" ng-click="login()">Đăng nhập</button>
+						<button type="reset" class="btn btn-danger">Reset</button>
+					</form>
+				</div>
+			</div>
+			<div class="panel panel-default" ng-show="user_login.id">
+				<div class="panel-heading">
+					<h3 class="panel-title">Thông tin tài khoản</h3>
+				</div>
+				<div class="panel-body">
+					<p><b>Id:</b>{{user_login.id}}</p>
+					<p><b>Họ tên:</b> {{user_login.name}}</p>
+					<p><b>Email:</b> {{user_login.email}}</p>
+					<p><b>Username:</b> {{user_login.username}}</p>
+					<p><b>Password:</b> {{user_login.password}}</p>
+					<p>
+						<a href="" class="btn btn-danger">Thoát</a>
+					</p>
+				</div>
+			</div>
+                <!-- <div ng-hide="check" class="thumbnail">
+                    <h3 class="panel-title">Thông tin tài khoản</h3>
+                    <p><b>Họ Và Tên :</b>{{ds.name}}</p>
+                    <p><b>Email :</b>{{ds.email}}</p>
+                    <p><b>UserName :</b>{{ds.username}}</p>
+                    <p><b>Password :</b>{{ds.password}}</p>
+
+                </div> -->
+		</div>
+	</div>
+	<!-- modal-view-student by id -->
+	<div class="modal fade" id="modal-id">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h3 class="modal-title">{{danhsachInfo.name}}</h3>
+				</div>
+				<div class="modal-body">
+					<p><b>Id:</b>{{$index +1}} </p>
+					<p><b>Họ tên:</b> {{danhsachInfo.name}}</p>
+					<p><b>Email:</b> {{danhsachInfo.email}}</p>
+					<p><b>Username:</b>{{danhsachInfo.username}} </p>
+					<p><b>Password:</b>{{danhsachInfo.password}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="jquery/jquery-3.4.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="angular/angular.min.js"></script>
+<script src="angular/angular-route.min.js"></script>
+<script>
+	var app = angular.module('myApp',[]);
+	app.controller('myController', function($scope,$http){
+		$http.get('data/Exam1.json').then(function (res){
+			$scope.danhsach = res.data;
+		});
+		$scope.show_xem = function(danhsach){
+			$('#modal-id').modal('show');
+			$scope.danhsachInfo = danhsach;
+		}
+	});
+</script>
+</html>

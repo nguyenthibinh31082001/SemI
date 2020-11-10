@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieapp" ng-controller="AppController">
+<head>
+	<meta charset="UTF-8">
+	<title>index2lab2</title>
+	 <script src="angular/angular.min.js"></script>
+	 <link rel="stylesheet" media="screen" href="bootstrap/css/bootstrap.min.css">
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+</head>
+<body >
+	<div class="container">
+		<div class="row">
+			<h2>Danh sách phim</h2>
+			<div class="col-md-3" ng-repeat="mv in movies">
+				 <div class="thumbnail">
+				 	<img ng-src="{{mv.Poster}}" alt="">
+				 <div class="caption text-center">
+				 	<h3>{{mv.Name}}</h3>
+				 	<a class="btn btn-sm btn-primary" ngclick="show_movie(mv)">
+					 <span class="glyphicon glyphicon-play"></span>
+				 	</a>
+				 </div>
+				 </div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var app = angular.module('movieapp',[]);
+	app.controller('AppController',function($scope){
+		$scope.movies = [
+			{Name:"Lorem ipsum dolor sit amet",Poster:"https://images-na.ssl-images-amazon.com/images/I/71EtAa2CtmL._SY741_.jpg"},
+			 {Name:"Consectetur adipisicing elit",Poster:"https://images-na.ssl-images-amazon.com/images/I/71EtAa2CtmL._SY741_.jpg"},
+			 {Name:"landitiis autem alias soluta",Poster:"https://images-na.ssl-images-amazon.com/images/I/71EtAa2CtmL._SY741_.jpg"},
+			 {Name:"Accusantium omnis non",Poster:"https://images-na.ssl-images-amazon.com/images/I/71EtAa2CtmL._SY741_.jpg"}
+
+		];
+	});
+</script>
+</html>

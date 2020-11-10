@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoapp" ng-controller="AppController">
+<head>
+	<meta charset="UTF-8">
+	<title>Lab1</title>
+	<script src="angular/angular.min.js"></script>
+	<style>
+		body{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Hello {{my_var}}</h1>
+	<h1>My Name {{my_name}}</h1>
+	<h1>My Email: {{my_email}}</h1>
+	<h1>My Phone: {{my_phone}}</h1>
+</body>
+<script>
+	var app = angular.module('demoapp',[]);
+	app.controller('AppController',function($scope){
+		$scope.my_var = "AngularJS App basic";
+		$scope.my_name = "BKAP"
+		$scope.my_email = "bkap@bachkhoa-aptech.edu.vn"
+		$scope.my_phone = "0986421127"
+	});
+</script>
+</html>

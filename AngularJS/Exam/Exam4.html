@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Exam4</title>
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap.min.css" >
+	<script src="jquery/jquery-3.4.1.min.js"></script>
+	<script src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+	<script src="angular/angular.min.js"></script>
+	<script src="angular/angular-route.min.js"></script>
+</head>
+<body ng-controller="mainCtrl">
+	<!-- include file menu nav.html -->
+<nav class="navbar navbar-inverse" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#!">Trang chủ</a></li>
+				<li class="active"><a href="#!cart">Giỏ hàng ({{total_qtt}} items - {{total_amount | currency:"":0}} đ)</a></li>
+			</ul>
+			<!-- <ul class="nav navbar-nav navbar-right">
+				<li><a href="#">abc@gmail.com</a></li>
+			</ul> -->
+		</div><!-- /.navbar-collapse -->
+	</div>
+</nav>
+	<div class="container" >
+<div class="panel panel-defaut">
+	<div class="panel-heading">
+		<h3 class="panel-title">Danh sách sản phẩm</h3>
+	</div>
+	<div class="col-md-3 " ng-repeat="sp in sanpham">
+		<div class="thumbnail">
+			<img ng-src="{{{sp.image}}" alt="">
+			<div class="caption text-center">
+				<h3>{{{sp.name}}</h3>
+				<p> Giá:{{{sp.price | currency:"":0}}đ</p>
+				<p>
+					<a href="#" class="btn btn-xs btn-primary" ng-click="show_xem(sp)">Chi tiet</a>
+					<a href="#" class="btn btn-xs btn-default">Giỏ hàng</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+
+	<!-- modal-view-student by id -->
+	<div class="modal fade" id="modal-show">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Proname</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-4">
+							<a href="" class="thumbnail">
+								<img ng-src="{{sanphamInfo.image}}" alt="">
+							</a>
+						</div>
+						<div class="col-md-8">
+							<h2>{{sanphamInfo.name}}</h2>
+							<h2>Giá: {{sanphamInfo.price | currency:"":0}} đ</h2>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" ng-click="" class="btn btn-primary">Thêm vào giỏ hàng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var app = angular.module('myApp',[]);
+	app.controller('myController', function($scope,$http){
+		$http.get('data/Exam4.json').then(function (res){
+			$scope.sanpham = res.data;
+		});
+		$scope.show_xem = function(sanpham){
+			$('#modal-id').modal('show');
+			$scope.sanphamInfo = sanpham;
+		}
+	});
+</script>
+</html>

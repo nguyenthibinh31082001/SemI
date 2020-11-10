@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Exam3</title>
+	<!-- Local bootstrap CSS & JS -->
+	<link rel="stylesheet" media="screen" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
+	<script src="jquery/jquery-3.4.1.min.js"></script>
+	<script src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+	<script src="angular/angular.min.js"></script>
+	<link rel="stylesheet" href="page/about.html">
+	<link rel="stylesheet" href="page/product.html">
+</head>
+<body ng-controller="myController">
+	<nav class="navbar navbar-inverse">
+	<div class="container">
+		<div class="row">
+		<a class="navbar-brand" href="#">Company Name</a>
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="home.html">Trang chủ</a></li>
+			<li><a href="gioithieu3.html">Giới thiệu</a></li>
+			<li><a href="sanpham3.html">Sản phẩm</a></li>
+		</ul>
+	</div>
+	</div>
+</nav>
+<div class="modal fade" id="modal-show">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Product name</h4>
+				</div>
+				<div class="modal-body" ng-repeat="item in sanpham">
+					<img ng-src="{{item.image}}" class="img-responsive">
+					<p class="text-center">
+						<strong>Giá: {{item.price}} đ</strong>
+					</p>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var app = angular.module('myApp',[]);
+	app.controller('myController', function($scope,$http){
+		$http.get('data/product3.json').then(function (res) {
+			$scope.sanpham = res.data;
+		});
+	});
+</script>
+</html>

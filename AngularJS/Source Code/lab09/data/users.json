@@ -1,0 +1,22 @@
+[
+    {
+        "name" : "Nguyễn Tiến Hùng",
+        "email": "hungnt@gmail.com",
+        "password" : "123456"
+    },
+    {
+        "name" : "Phạn Minh Thắng",
+        "email": "thangpm@gmail.com",
+        "password" : "123456"
+    },
+    {
+        "name" : "Bùi Quốc Khánh",
+        "email": "khanhbq@gmail.com",
+        "password" : "123456"
+    },
+    {
+        "name" : "Cao Trung Hiếug",
+        "email": "hieuct@gmail.com",
+        "password" : "123456"
+    }
+]
