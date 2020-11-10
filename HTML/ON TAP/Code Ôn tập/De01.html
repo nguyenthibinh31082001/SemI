@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>de01</title>
+		<style>
+		.content{
+			width: 100%;
+			margin: 0 auto;
+		}
+		.clearfix{
+		overflow: hidden;
+		clear: both;
+		}	
+		header{
+			background-color: #a369af;
+			padding: 10px 0;
+		}
+		img{
+			width: 300px;
+			height: 50px;
+			margin: 10px;
+		}
+		h2{
+			background-color:#a369af;
+			text-align: center;
+			color: white;
+			width: 950px;
+			height: 30px;
+			margin: 10px auto;
+		
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			width:500px;
+			margin: 0 auto;
+		}
+		ul li{
+			padding:10px;
+			float: left;
+		}
+		.left{	
+			width: 100px;
+		}
+		.right{
+			width: 300px;
+		}
+		span{
+			margin-left: 85px ;
+		}
+		.item{
+			margin-left: 100px;
+		}
+		footer{
+			background-color: black;
+			padding: 15px ;
+			width: 100%;
+		}
+		h3{
+			color: white;
+		 		margin: 0 auto;
+		}
+		p{
+			color: white;
+		
+		}
+		.righttem{
+			margin-left: 120px;
+			padding: 10px;
+			margin-bottom: 5px;
+			margin-top: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="content clearfix">
+		<header class="content clearfix">
+			<img src="https://bachkhoa-aptech.edu.vn/upload/image/logo-trang-01(1).png" alt="">
+		</header>
+		<section class="content clearfix">
+			<h2>Đăng ký khóa học</h2>
+			<ul>
+				<li class="left"><strong><b>Họ và tên</b></strong></li>
+				<li class="right">
+					<input type="text" name="" id="hoten" placeholder="NGUYEN HUY HOANG"> <span class="item">(*)</span>
+				</li>
+				<li class="left"><strong><b>Email</b></strong></li>
+				<li class="right">
+					<input type="text" name="" id="email"placeholder="bkap@bachkhoa-aptech.com"><span class="item">(*)</span>
+				</li>
+				<li class="left"><strong><b>Số điện thoại</b></strong></li>
+				<li class="right">
+					<input type="text" name="" id="sdt"placeholder="123456"><span class="item">(*)</span>
+				</li>
+				<li class="left"><strong><b>Khóa hoc</b></strong></li>
+				<li class="right">
+					<select type="text" name="" id="khoahoc"placeholder="--Chọn khóa học--" ><span class="item">(*)</span>
+						<option value="0">--Chọn khóa hoc--</option>
+						<option value="1">Lập trình web với java</option>
+						<option value="2">Lập trình web PHP &MySQL</option>
+						<option value="3">Lập trình web áp.net MVC5</option>
+					</select><span>(*)</span>
+				</li>
+				<li class="left"><strong><b>Giới tính</b></strong></li>
+				<li class="right">
+					<input type="radio" name="" id="" checked="true">Nữ
+					<input type="radio" name="" id="">Nam</li>
+				<li class="left"><strong><b>Sở thích</b></strong></li>
+				<li class="right">
+					<input type="checkbox" name="" checked="true">Thể thao
+					<input type="checkbox" name="">Du lịch
+					<input type="checkbox" name="">Lập trình</li>
+				<li class="left"><strong><b>Ghi chú</b></strong></li>
+				<li class="right">
+					<textarea name="" id="ghichu"placeholder="Yêu cầu hoặc thắc mắc thêm"></textarea>
+				</li>
+				<li class="righttem">
+					<input type="button"value="Đăng ký" onclick="guithongtin()"/>
+					<input type="reset"value="Làm lại">
+				</li>
+		</section>
+		<footer>
+			
+				<h3>HỆ THỐNG ĐÀO TẠO CNTT QUỐC TẾ BACHKHOA-APTECH</h3>
+				<p>	
+				15 năm hoạt động - 30.000 HV đã tốt nghiệp- Chương trình đào tạo chuẩn quốc tế
+				</p>
+		</footer>
+	</ul>
+</div>
+</body>
+	<script>
+		function guithongtin(){
+			var hoten = document.getElementById("hoten");
+			var email = document.getElementById("email");
+			var sdt = document.getElementById("sdt");
+			var khoahoc = document.getElementById("khoahoc");
+			var ghichu = document.getElementById("ghichu");
+
+			var ktra_dk1 = /^[A-Z]+(([',. -][A-Z])?[A-Z]*)*$/;	
+			var ktra_dk2 = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
+			var ktr_sdt = /(09|01[2|6|8|9])+([0-9]{8})\b/;
+				if(ktra_dk1.test(hoten.value) && hoten.value!=""){
+					if(ktra_dk2.test(email.value) && email.value!=""){
+						if(ktr_sdt.test(sdt.value) && sdt.value!=""){
+							if(khoahoc.value!=0){
+								if(ghichu.value==""){
+									alert("Bạn chưa nhập ghi chú");
+								}else{
+									alert("Dang ky thanh cong!!!");
+								}
+							}else{
+								alert("Bạn chưa chon khóa học");
+							}
+						}else{
+							alert("Bạn nhập sai định dạng số điện thoại");
+						}
+					}else{
+						alert("Bạn nhập sai định dạng email");
+					}
+				}else{
+					alert("Bạn nhập sai định dạng họ tên");
+				}
+		}
+	</script>
+</html>

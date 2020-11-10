@@ -1,0 +1,27 @@
+.main{
+	border:3px  solid #bab3b2; 
+	width: 45%;
+}
+h1{
+	margin: 0;
+}
+p{
+	margin: 0;
+}	
+.Header{
+	background: #6cccf2;
+	padding: 25px 0;
+}
+.Table{
+	width: 100%;
+	background: #b0e2ff;
+}
+input[type=submit]{
+	background-color: blue;
+}
+select{
+	width: 170px
+}
+p{
+	font-size: 12px;
+}

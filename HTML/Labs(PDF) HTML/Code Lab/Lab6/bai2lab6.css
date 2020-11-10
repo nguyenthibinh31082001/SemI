@@ -1,0 +1,21 @@
+.Header{
+	background-color: #6f8197;
+}
+.main{
+	border: 3px solid #ffdfe5;
+	background-color: #6f8197;
+	width: 45%;
+	color: white;
+}
+input[type=submit]{
+	background-color: #fbdb65;
+}
+select{
+	width:170px ;
+}
+p{
+	font-size:12px ;
+}
+hr{
+	border: 1px solid black;
+}

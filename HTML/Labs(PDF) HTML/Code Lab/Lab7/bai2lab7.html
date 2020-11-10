@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bai2lab7</title>
+</head>
+<body>
+	<script>
+		var sum=0;
+		var tong=0;
+		var chiahet=0;
+		var mang2chieu = new Array();
+		var number = prompt("Nhập vào phần tử của ma trận:");
+		for(i=0;i<number;i++){
+				var mang1chieu =new Array();
+			for(j=0;j<number;j++){
+				item=prompt("Nhập vào phần tử mảng thứ["+(i+1)+"]["+(j+1)+"]");
+				mang1chieu[j]=item;
+			}
+			mang2chieu[i]= mang1chieu;
+		}
+		for(i=0;i<number;i++){
+			for(j=0;j<number;j++){
+				if(i==0||i==(number-1)){
+					document.write("*");
+				}else if(j==0||j==(number-1)){
+					document.write("*");
+				}else{
+					document.write("&nbsp;&nbsp");
+				}
+			
+			}
+			document.write("<br/>");
+		}
+		for(i=0;i<number;i++){
+			for(j=0;j<number;j++){
+				if(i==j){
+					sum += parseInt(mang2chieu[i][j]);
+				}
+			}
+		}			
+		document.write("Tổng đường chéo chính="+sum +"<br/>");
+		for(i=0;i<number;i++){
+			for(j=0;j<number;j++){
+				if((i+j)==(number+1)){
+					sum += parseInt(mang2chieu[i][j]);
+				}
+			}
+		}			
+		document.write("Tổng đường chéo phụ="+sum+"<br/>");	
+		for(i=0;i<number;i++){
+			for(j=0;j<number;j++){
+				if(mang2chieu[i][j]%3==0 && mang2chieu[i][j]%5==0){
+					chiahet = mang2chieu[i][j];			
+				}
+			}
+		}
+		document.write("C1ác số chia hết cho 3 và 5:"+chiahet+"<br/>");
+		for(i=0;i<number;i++){
+			for(j=0;j<number;j++){
+				if(mang2chieu[i][j]%2==0){
+					 tong += parseInt(mang2chieu[i][j]);
+				}
+			}
+		}
+		document.write("Tổng các số chẵn="+tong);
+	</script>
+</body>
+</html>

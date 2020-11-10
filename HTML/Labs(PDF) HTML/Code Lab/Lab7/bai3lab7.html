@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bai3lab7</title>
+</head>
+<body>
+	<script>
+		var max=0;
+		var min=9999;
+		var mang1chieu = new Array();
+		var number = prompt("Nhập vào phần tử của mảng:");
+		for(i=0;i<number;i++){
+			item=prompt("Nhập vào phần tử mảng thứ["+(i+1)+"]");
+			mang1chieu[i] = item;
+		}
+		for(i=0;i<number;i++){
+			if(max<mang1chieu[i]){
+				max = mang1chieu[i];
+			}
+		}
+		document.write("Số lớn nhất="+max +"<br/>");
+		for(i=0;i<number;i++){
+			if(mang1chieu[i]<min){
+				min = mang1chieu[i];
+			}
+		}
+		document.write("Số nhỏ nhất="+min);
+	</script>
+</body>
+</html>

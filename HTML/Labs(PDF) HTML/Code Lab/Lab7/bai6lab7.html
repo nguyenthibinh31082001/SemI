@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bai6lab7</title>
+</head>
+<body>
+	<script>
+		var tong =0;
+		var i=0;
+		do{
+			var n = parseInt(prompt("Nhập vào số n lớn hơn 0 và nhỏ hơn 100:"));
+		}while(n<0||n>100);
+		for(i=0;i<n;i++){
+			tong += parseInt(i);
+		}
+		document.write("Tổng các số lớn hơn 0 và nhỏ hơn 100 la:" +tong);
+	</script>
+</body>
+</html>

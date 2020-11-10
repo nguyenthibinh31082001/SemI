@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>de02</title>
+	<style>
+		.noidung{
+			width: 100%;
+			margin: 0 auto;
+			background-color: #a369af;
+		}
+ 		.tieude{		
+			padding: 10px 0;
+			margin: 0 auto;
+			overflow: hidden;
+			clear: both;
+		}
+		img{
+			width: 40%;
+			height: 50px;
+			margin: 10px;			
+		}
+		div{
+			width: 100%;
+		}
+		.left{
+			width: 40%;
+			float: left;
+		}
+		.left img{
+			width: 300px;
+			height: 150px;
+			padding:  2% 20%;
+			margin-bottom: 10px;
+		}
+		.tieude1{
+			background-color: black;
+			text-align: center;
+			color: white;
+			margin: 10px auto;
+			width: 80%;
+			height: 30px;
+		}
+		.right{
+			float: right;
+			width: 60%;
+		}
+		.tieude2{
+			background-color: black;
+			text-align: center;
+			color: white;
+			margin: 10px auto;
+			width: 90%;
+			height: 30px;
+		}
+		ul{
+			list-style: none;
+			padding: 25px;
+			margin: 0;
+			width: 100%;
+			margin: 0 auto;
+		}
+		span{
+			color: red;
+		}
+		li{
+			margin-bottom: 20px; 
+		}
+		input[type=text]{
+			width: 700px;
+		}
+		textarea{
+			width: 700px;
+		}
+		select{
+			width: 700px;
+		}
+		input[type=radio]{
+			margin-left: 50px;
+		}
+		style-test{
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div class="noidung">
+		<header class="tieude">
+			<img src="https://bachkhoa-aptech.edu.vn/upload/image/logo-trang-01(1).png" alt="">
+		</header>
+	</div>
+	<div >
+	<div class="left">
+		<h3 class="tieude1">Tin nổi bật</h3>
+		<img  class="b"src="https://www.photofunny.net/s/5096_android-logo-sticker-for-ur-photos.jpg" alt="">
+		<img class="b"src="https://www.photofunny.net/s/5096_android-logo-sticker-for-ur-photos.jpg" alt="">
+		<img class="b"src="https://www.photofunny.net/s/5096_android-logo-sticker-for-ur-photos.jpg" alt="">
+	</div>
+	<div class="right">
+		<h3 class="tieude2">Thêm dang mục</h3>
+		<ul>
+			<li><strong>Tên danh mục</strong><span>(*)</span></li>
+			<li><input type="text"name="" id="tendanhmuc"class="input"onblur="textUpperCase()"></li>
+			<li><strong>Meta link</strong> <span>(*)</span></li>
+			<li><input type="text"name=""id="metalink"class="input"></li>
+			<li><strong>Thứ tự hiển thị</strong> <span>(*)</span></li>
+			<li><input type="text"name=""id="thutu"class="input"></li>
+			<li><strong>Mô tả</strong></li>
+			<li> <textarea name="" id="mota" cols="20" rows="5"></textarea></li>
+			<li><strong>Danh mục cha</strong></li>
+			<li><select name="" id="danhmuc">
+				<option value="0">--Chọn danh mục cha--</option>
+				<option value="1">Trang chủ</option>
+				<option value="2">Sản phẩm</option>
+				<option value="3">Tin tức</option>
+				<option value="4">Liên hệ</option>
+			</select></li>
+			<li><strong>Trạng thái</strong></li>
+			<li>
+			<label for="hide">Ẩn</label><input type="radio" name=""id=""value="hide">
+			<label for="unhide">Hiện</label><input type="radio"name=""id=""value="unhide"></li>
+			<li>
+				<input type="button" value="Thêm"onclick="kiemtra()">
+				<input type="reset" value="Làm lại"></button>
+			</li>
+		</ul>
+	</div>
+</div>/
+</body>
+<script>
+	function kiemtra(){
+		var tendanhmuc = document.getElementById("tendanhmuc");
+		var metalink = document.getElementById("metalink");
+		var thutu = document.getElementById("thutu");
+		var mota = document.getElementById("mota");
+		var danhmuc = document.getElementById("danhmuc");
+
+		var ktra_dk1 = /^[A-Z]+(([',. -][A-Z ])?[A-Z]*)*$/;
+		var ktr_dk2 = /^[a-zA-Z0-9@#$%^&*|_+/?.]/;
+		var kra_dk3 = /^[0-9]{1,3}$/;
+				
+			if(ktra_dk1.test(tendanhmuc.value) && tendanhmuc.value!=""){
+				if(ktr_dk2.test(metalink.value) && metalink.value!=""){
+					if(kra_dk3.test(thutu.value) && thutu.value<99){
+						if(mota.value!=""){
+							if(danhmuc.value!=0){
+								alert("Bạn kiểm tra thành công!!!");
+							}else{
+								alert("Bạn chưa chon danh mục cha");
+							}
+						}else{
+							alert("Bạn chưa nhập mô tả");
+						}
+					}else{
+						alert("Bạn nhập sai định dạng thứ tự hiển thị");
+					}
+				}else{
+					alert("Bạn nhập sai định dạng Meta link");
+				}
+			}else{
+				alert("Bạn nhập sai định dạng tên danh mục");
+			}
+	}
+
+</script>
+</html>

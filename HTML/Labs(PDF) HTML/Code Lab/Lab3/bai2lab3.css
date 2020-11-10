@@ -1,0 +1,25 @@
+.item{
+	overflow: hidden;
+	clear: both;
+}
+.main{
+	/* width: 500px; */
+	margin: 0 auto;
+	border:solid 2px gray;	
+}
+.img{
+	width: 200px;
+	float: left;
+	margin: 5px;
+ }	
+img{
+	width: 200px;
+	border-radius:100px; 
+}
+h3{
+	color: blue;
+}
+.a{
+	width: 400px;
+	float: left;
+}

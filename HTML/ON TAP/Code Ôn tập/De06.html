@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>de06</title>
+	<style>
+		.noidung{
+			width: 100%;
+			margin: 0 auto;
+			background-color: #a369af;
+		}
+		.tieude{		
+			padding: 10px 0;
+			margin: 0 auto;
+			overflow: hidden;
+			clear: both;
+		}
+		img{
+			width: 40%;
+			height: 50px;
+			margin: 10px;			
+		}
+		form{
+			width: 70%;
+			height: 450px;
+			background-color: #bab3b2;
+			border: 1px solid black;
+			margin: 20px auto;
+		}
+		h3{
+			background-color: black;
+			color: white;
+			text-align: center;
+			margin: 0 auto;
+		}
+		span{
+			color: red;
+		}
+		.left{
+			float: left;
+			width: 50%;
+		}
+		.right{
+			float: left;
+			width: 50%;
+		}
+		ul li{
+			margin: 15px;
+			list-style: none;
+		}
+/* 		h2{
+			background-color: #a369af;
+			color: white;
+			text-align: center;
+			height: 50px;
+		} */
+		input[type=text]{
+			width: 375px;
+		}
+		input[type=password]{
+			width: 375px;
+		}
+		input[type=button]{
+			background-color:blue;
+			color: white;
+		}
+		.aa{
+			background-color: #a369af;
+			color: white;
+			text-align: center;
+			padding-top: 1px; 
+			height: 65px;
+		}
+	</style>
+</head>
+<body>
+	<div class="noidung">
+		<header class="tieude">
+			<img src="https://bachkhoa-aptech.edu.vn/upload/image/logo-trang-01(1).png" alt="">
+		</header>
+	</div>
+	<div>
+		<form action=""method="post">
+			<h3>Dang ky tai khoan</h3>
+			<div class="left">
+				<ul>
+					<li><strong>Nhap ho ten</strong><span>(*)</span></li>
+					<li><input type="text"name=""id="hoten" placeholder="Nhap ho ten..." onblur="textUpperCase()"></li>
+					<li><strong>Mat khau</strong><span>(*)</span></li>
+					<li><input type="password"name=""id="matkhau" placeholder="Mat khau..."></li>
+					<li><strong>Dia chi</strong></li>
+					<li><input type="text"name=""id="diachi" placeholder="Dia chi..."></li>
+					<li><strong>Gioi tinh</strong></li>
+					<li><input type="radio"name=""id="gioitinh">Nam
+						<input type="radio"name=""id="gioitinh">Nu</li>
+					<li><input type="button"value="Dang ky" onclick="guidangky()"></li>
+				</ul>
+			</div>
+			<div class="right">
+				<ul>
+					<li><strong>Dia chi Email</strong><span>(*)</span></li>
+					<li><input type="text"name=""id="email" placeholder="Dia chi email..."></li>
+					<li><strong>Xac nhan mat khau</strong><span>(*)</span></li>
+					<li><input type="password"name=""id="xacnhanmatkhau" placeholder="Xac nhan mat khau..."></li>
+					<li><strong>Ngay sinh</strong><span>(*)</span></li>
+					<li><input type="date"name=""id="date" placeholder="dd/mm/yyyy"></li>
+				</ul>
+			</div>
+		</form>
+		<footer class="aa">
+				<h2>HE THONG DAO TAO CNTT QUOC TE BACHKHOA-APTECH</h2>
+			</footer>
+	</div>
+</body>
+	<script>
+		function guidangky(){
+			var hoten = document.getElementById("hoten");
+			var email = document.getElementById("email");
+			var matkhau = document.getElementById("matkhau");
+			var xacnhanmatkhau = document.getElementById("xacnhanmatkhau");
+			var diachi = document.getElementById("diachi");
+			var gioitinh =  document.getElementById("gioitinh");
+
+			var ktra_ten = /^[A-Z]+(([',. -][A-Z ])?[A-Z]*)*$/;
+			var ktra_email =  /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
+			var ktra_mk = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{6,8}$/;
+			
+			if(ktra_ten.test(hoten.value) && hoten.value!=""){
+				if(ktra_email.test(email.value) && email.value!=""){
+					if(ktra_mk.test(matkhau.value) && matkhau.value!=""){
+						if(ktra_mk.test(xacnhanmatkhau.value) && xacnhanmatkhau.value!=""){
+							if(diachi.value!=""){
+									alert("Dang ky thanh cong!!!");
+							}else{
+								alert("Ban chua nhap dia chi");
+							}
+						}else{
+							alert("Ban nhap sai dinh dang xac nhan mat khau");
+						}	
+					}else{
+						alert("Ban nhap sai dinh dang mat khau");
+					}
+				}else{
+					alert("Ban nhap sai dinh dang email");
+				}
+			}else{
+				alert("Ban nhap sai dinh dang ho ten");
+			}
+		}
+	</script>
+</html>

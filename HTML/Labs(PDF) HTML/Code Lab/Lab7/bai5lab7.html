@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bai5lab7</title>
+</head>
+<body>
+	<script>
+			var a = parseInt(prompt("Nhập vào số a:"));
+			var b = parseInt(prompt("Nhập vào số b:"));
+			var phep_tinh = prompt("Nhập vào phép tính:");
+			do{
+				if(phep_tinh != 'cong'&&phep_tinh != 'tru'&&phep_tinh != 'nhan' &&phep_tinh !='chia'){
+					phep_tinh=prompt("Không hợp lệ");
+				}
+			}while(phep_tinh != 'cong'&&phep_tinh != 'tru'&&phep_tinh != 'nhan' &&phep_tinh !='chia')
+			if(phep_tinh=='cong'){
+				document.write("Tổng 2 số a và b="+(a+b)+"<br/>");
+			} else if(phep_tinh=='tru'){
+				document.write("Hiệu 2 số a và b="+(a-b)+"<br/>");
+			} else if(phep_tinh=='nhan'){
+				document.write("Tích 2 số a và b="+(a*b)+"<br/>");
+			}else if(phep_tinh=='chia'){
+				document.write("Thương 2 số a và b="+(a/b));
+			}
+	</script>
+</body>
+</html>

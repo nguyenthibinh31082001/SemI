@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>de05</title>
+	<style>
+		.tieude{
+			background-color: #91e374;
+			width: 100%;
+			height: 40px;
+			text-align: center;
+		}
+		form{
+			background-color: #bab3b2;
+		}
+		.left{
+			float: left;
+			width: 60%;
+			height: 400px;
+		}
+		h3{
+			text-align: center;
+			border-bottom:  1px solid #dcc6ad;	
+		}
+		ul li{
+			margin: 15px;
+			list-style: none;
+		}
+		.right{
+			width: 35%;
+			float: right;
+		}
+		img{
+			float: right;
+			width: 70%;
+			height: 70px; 
+		}
+		.ccc{
+			background-color: #ddbdff;
+			height: 450px;
+		}
+		.aa{
+			list-style: none;
+			border: solid 1px white;
+			width: 250px;
+			height: 30px;
+			float:right;
+			overflow: hidden;
+			clear: both;
+			background-color: #93d6c3;
+			margin: 0px;
+			padding: 0 6px;
+			margin-right: 20px;
+		}
+		input[type=button]{
+			background-color: #fc9870;
+			margin: 10px;
+			padding: 10px;
+			border-radius: 5px;
+		}
+		input[type=reset]{
+			background-color: #fc9870;
+			border-radius: 5px;
+			margin: 10px;
+			padding: 10px;
+		}
+		.bbb{
+			margin-left: 120px;
+		}
+		.dd{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="tieude">
+		<header><h2>Welcome to Bach Khoa Aptech</h2></header>
+	</div>
+	<div class="ccc">
+	<div class="left">
+		<form action=""method="post">
+			<h3>Chương Trình Thư Điện Tử</h3>
+			<div class="dd">
+			<ul>
+				<li>
+					<strong>Người Gửi</strong>
+					<input type="text"name="nguoigui"id="nguoigui" onblur="textUpperCase()">
+				</li>
+				<li>
+					<strong>Người Nhận</strong>
+					<input type="text"name="nguoinhan"id="nguoinhan" onblur="textUpperCase()">
+				</li>
+				<li>
+					<strong>Tiêu Đề Thư</strong>
+					<input type="text"name="tieudethu"id="tieudethu">
+				</li>
+				<li>
+					<strong>Nội Dung Thư</strong>
+					<textarea name="noidungthu" id="noidungthu" cols="35" rows="2"></textarea>
+				</li>
+				<li>
+					<strong>Ngày Giải Quyết</strong>
+					<input type="text"name="ngaygiaiquyet"id="ngaygiaiquyet" placeholder="mm/dd/yy">
+				</li>
+				<li>
+					<strong>Cấp Độ</strong>
+					<select name="capdo" id="capdo">
+						<option value="0">--Chọn cấp độ ưu tiên--</option>
+						<option value="1">Cấp độ 1</option>
+						<option value="2">Cấp độ 2</option>
+						<option value="3">Cấp độ 3</option>
+					</select>
+				</li>
+				<li>
+					<strong>Gửi bộ phận</strong>
+					<input type="radio" name="bophangui" id="bophangui" checked="true">P.Đào tạo
+					<input type="radio" name="bophangui" id="bophangui">P.Chăm sóc học viên 
+				</li>
+				<li>
+					<div class="bbb">
+						<input type="button" value="Gui ngay" onclick="guithongtin()"/>
+						<input type="reset" value="Làm lại">
+					</div>
+				</li>
+			</ul>
+		</div>
+		</form>
+	</div>
+	<div class="right">
+		<img src="https://bachkhoa-aptech.edu.vn/upload/image/logo-trang-01(1).png" alt="">
+		<ul >
+			<li class="aa">Trang chủ</li>
+			<li class="aa">Tin tức</li>
+			<li class="aa">Về Bkap</li>
+			<li class="aa">Liên hệ</li>
+		</ul>
+	</div>
+</div>
+</body>
+	<script>
+		function guithongtin(){
+			var nguoigui = document.getElementById("nguoigui");
+			var nguoinhan = document.getElementById("nguoinhan");
+			var tieudethu = document.getElementById("tieudethu");
+			var noidungthu = document.getElementById("noidungthu");
+			var ngaygiaiquyet = document.getElementById("ngaygiaiquyet");
+			var capdo = document.getElementById("capdo");
+
+			var ktra_dk1= /^[A-Z]+$/;	
+			var ktra_dk2 = /^[a-zA-Z0-9]{20,}$/;
+			var kta_ngay = /^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/;
+
+				if(ktra_dk1.test(nguoigui.value) && nguoigui.value!=""){
+					if(ktra_dk1.test(nguoinhan.value) && nguoinhan.value!=""){
+						if(ktra_dk2.test(tieudethu.value) && tieudethu.value!=""){
+							if(ktra_dk2.test(noidungthu.value) && noidungthu.value!=""){
+								if(kta_ngay.test(ngaygiaiquyet.value) && ngaygiaiquyet.value!=""){
+									if(capdo.value!=0){
+										alert("Ban dang ki thanh cong!!!");
+									}else{
+										alert("Ban chua chon cap do");
+									}
+								}else{
+									alert("Ban nhap sai dinh dang ngay giai quyet");
+								}
+							}else{
+								alert("Ban nhap sai dinh dang noi dung thu");
+							}
+						}else{
+							alert("Ban nhap sai dinh dang tieu de thu");
+						}
+					}else{
+						alert("Ban nhap sai dinh dang nguoi nhan");
+					}
+				}else{
+					alert("Ban nhap sai dinh dang nguoi gui");
+				}
+	}
+	</script>
+</html>

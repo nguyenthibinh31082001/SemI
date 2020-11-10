@@ -1,0 +1,23 @@
+.item{
+	overflow: hidden;
+	clear: both;
+}
+#main{
+	margin: 0 auto;
+	border: solid 2px gray;
+}
+.imgDiv{
+	width: 200px;
+	float: left; 
+	margin: 5px;
+}
+img{
+	width:300px;
+}
+h3{
+		color: blue;
+}
+.itemText{	
+	width: 900px;
+	float: right;
+}

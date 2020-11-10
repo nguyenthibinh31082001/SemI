@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bai1lab4</title>
+	<style>
+		div{
+			width: 450px;
+			border-left: 1px solid #a369af;
+			border-right: 1px solid #a0294c;
+			border-bottom: 1px solid #a0294c;
+			border-top: 1px solid #a369af;
+			background: #abb88e;
+			border-radius: 8px;
+		}
+		input[type=text]{
+			border: 1px solid red;
+			border-radius: 3px;
+
+		}
+		textarea{
+			width: 165px;
+			height: 50px;
+			border: 1px solid red;
+			border-radius: 3px;
+
+		}
+		input[type=submit]{
+			background-color: blue;
+			width: 60px;
+		}
+		p{
+			color: red;
+		}
+		h1{
+			text-align: center;
+			color:#ae323b;
+		}
+		hr{
+			width: 425px;
+			border-color: #cd4236;
+		}
+		span{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<form action="" method="post">
+		<table cellpadding="10" cellspacing="0" align="center">
+		 	<h1>SEND US A MESSAGE</h1>
+		 			<hr>
+		 	<p>*Are required</p>
+			<tr>
+				<td>Your full name <span>*</span></td>
+				<td><input type="text"name="Your full name" id="Your full name" placeholder="Enter your full name"></td>
+			</tr>
+			<tr>
+				<td>Email Address <span>*</span></td>
+				<td><input type="text"name="Email Address" id="Email Address" placeholder="Enter your email"></td>
+			</tr>
+			<tr>
+				<td>Subject <span>*</span></td>
+				<td><input type="text"name="Subject"id="Subject" placeholder="Enter Subject"></td>
+			</tr>
+			<tr>
+				<td>Message <span>*</span></td>
+				<td><textarea name="Message" id="Message" cols="18" rows="2"></textarea></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td><input type="submit" value="Gui"></td>
+			</tr>
+		</table>
+	</form>
+</div>
+</body>
+</html>
