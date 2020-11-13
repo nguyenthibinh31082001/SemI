@@ -1,0 +1,25 @@
+<div class="checkout_area section-padding-80" ng-controller="registerController">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-md-6">
+                <div class="checkout_details_area mt-50 clearfix">
+                    <div class="containersss">
+                        <h2>Register</h2>
+                        <form action="" method="POST">
+                            <label for="user">User Name:</label>
+                            <input type="text" name="user_name" required ng-model="user_name"> <br>
+                            <label for="user">Email:</label>
+                            <input type="email" name="email" required ng-model="email"> <br>
+                            <label for="user">Password:</label>
+                            <input type="password" name="password" required ng-model="password"> <br>
+                            <label for="pass">ConFirm Password:</label>
+                            <input type="password" name="confirm_password" required ng-model="confirm_password"> <br>
+                            <button ng-click="register()">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

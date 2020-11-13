@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Nexus">
+</Property><Property Name="Solution File" Value="C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Nexus.sln">
+</Property><Property Name="User Options File" Value="C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Nexus.suo">
+</Property><Property Name="Date" Value="17 Tháng Chín 2013">
+</Property><Property Name="Time" Value="16:31 CH">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Nexus.sln" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\Nexus.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Nexus.suo" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\Nexus.suo">
+</Event><Event ErrorLevel="0" Project="DataLayer" Source="DataLayer\DataLayer.csproj" Description="Project file successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\DataLayer\DataLayer.csproj">
+</Event><Event ErrorLevel="0" Project="DataLayer" Source="DataLayer\DataLayer.csproj.user" Description="Project user file successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\DataLayer\DataLayer.csproj.user">
+</Event><Event ErrorLevel="0" Project="DataLayer" Source="DataLayer\Data.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\DataLayer\Data.cs">
+</Event><Event ErrorLevel="0" Project="DataLayer" Source="DataLayer\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\DataLayer\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DataLayer" Source="DataLayer\DataLayer.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DataLayer" Source="DataLayer\DataLayer.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\BussinessLayer.csproj" Description="Project file successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\BussinessLayer.csproj">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\BussinessLayer.csproj.user" Description="Project user file successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\BussinessLayer.csproj.user">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\Accountant_BL.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\Accountant_BL.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\Broker_BL.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\Broker_BL.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\Common.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\Common.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\Connection_BL.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\Connection_BL.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\count_BL.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\count_BL.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\CryptorEngine.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\CryptorEngine.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\Customer_BL.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\Customer_BL.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\Employee_BL.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\Employee_BL.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\Equipment_BL.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\Equipment_BL.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\FeedBack_BL.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\FeedBack_BL.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\LoginWeb.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\LoginWeb.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\Other_BL.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\Other_BL.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\Plan_BL.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\Plan_BL.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\RetailsShop_BL.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\RetailsShop_BL.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\Tax_BL.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\Tax_BL.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\Technical_BL.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\Technical_BL.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\Vendor_BL.cs" Description="File successfully backed up as C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\Backup1\BussinessLayer\Vendor_BL.cs">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\BussinessLayer.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="BussinessLayer" Source="BussinessLayer\BussinessLayer.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Nexus.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Nexus.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DataLayer" Source="DataLayer\DataLayer.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="BussinessLayer" Source="BussinessLayer\BussinessLayer.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

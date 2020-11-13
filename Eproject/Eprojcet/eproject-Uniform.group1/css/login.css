@@ -1,0 +1,53 @@
+.containersss {
+    width: 500px;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 50%;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    margin-left: 50px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+input {
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+button {
+    margin: 15px 0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+/* product detail  */
+
+.click_img img {
+    height: 90px;
+    margin: 10px 0;
+    display: flex;
+    opacity: 0.6;
+}
+
+.click_img img :hover {
+    opacity: 1;
+}
+
+.pro_detail img {
+    width: 60%;
+}

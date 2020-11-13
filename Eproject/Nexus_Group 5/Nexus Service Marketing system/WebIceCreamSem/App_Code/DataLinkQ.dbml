@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ICECREAMPALOR" Class="DataLinkQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=HONG-PC;Initial Catalog=ICECREAMPALOR;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ICECREAMPALORConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ADMIN" Member="ADMINs">
+    <Type Name="ADMIN">
+      <Column Name="AdminId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AdminName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PassWord" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BOOKRECIPE" Member="BOOKRECIPEs">
+    <Type Name="BOOKRECIPE">
+      <Column Name="BId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="BOOKRECIPE_ORDERDETAIL" Member="ORDERDETAILs" ThisKey="BId" OtherKey="BId" Type="ORDERDETAIL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CUSTOMER" Member="CUSTOMERs">
+    <Type Name="CUSTOMER">
+      <Column Name="Cid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CUserName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CPassWord" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CPhone" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CEmail" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CAddress" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="AccountNumber" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="CUSTOMER_ORDER" Member="ORDERs" ThisKey="Cid" OtherKey="CId" Type="ORDER" />
+      <Association Name="CUSTOMER_PAYFEE" Member="PAYFEEs" ThisKey="Cid" OtherKey="CId" Type="PAYFEE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FEEDBACK" Member="FEEDBACKs">
+    <Type Name="FEEDBACK">
+      <Column Name="FBId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Sender" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FLAVOR" Member="FLAVORs">
+    <Type Name="FLAVOR">
+      <Column Name="FId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FProvider" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FImage" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Ingredient" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Recipe" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="TypeFlavor" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ORDERDETAIL" Member="ORDERDETAILs">
+    <Type Name="ORDERDETAIL">
+      <Column Name="BId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateDelivery" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="BOOKRECIPE_ORDERDETAIL" Member="BOOKRECIPE" ThisKey="BId" OtherKey="BId" Type="BOOKRECIPE" IsForeignKey="true" />
+      <Association Name="ORDER_ORDERDETAIL" Member="ORDER" ThisKey="OId" OtherKey="OId" Type="ORDER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ORDERS" Member="ORDERs">
+    <Type Name="ORDER">
+      <Column Name="OId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ContactDetail" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Cost" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PayOption" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DateOlder" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DateDelivery" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="ORDER_ORDERDETAIL" Member="ORDERDETAILs" ThisKey="OId" OtherKey="OId" Type="ORDERDETAIL" />
+      <Association Name="ORDER_PAYMENT" Member="PAYMENTs" ThisKey="OId" OtherKey="OId" Type="PAYMENT" />
+      <Association Name="CUSTOMER_ORDER" Member="CUSTOMER" ThisKey="CId" OtherKey="Cid" Type="CUSTOMER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAYFEES" Member="PAYFEEs">
+    <Type Name="PAYFEE">
+      <Column Name="PayFeesID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DatePay" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TypeFees" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="CUSTOMER_PAYFEE" Member="CUSTOMER" ThisKey="CId" OtherKey="Cid" Type="CUSTOMER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAYMENT" Member="PAYMENTs">
+    <Type Name="PAYMENT">
+      <Column Name="PId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DatePay" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="ORDER_PAYMENT" Member="ORDER" ThisKey="OId" OtherKey="OId" Type="ORDER" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

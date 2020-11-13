@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="en">
+<html prefix="og: http://ogp.me/ns#">
+
+
+<!-- Mirrored from cellinfo.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 May 2020 08:44:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <!--META-->
+    <meta charset="UTF-8">
+    <title>Cell Info</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="name" content="Cell Info" />
+    <meta name="image" content="template_assets/images/200x200.jpg">
+    <meta name="description" content="Monitor and analyze  tools  for  mobile network data that are comming from actual mobile users.">
+    <meta name="keywords" content="mobile network analyzing,through put benchmark,signal quality,real time monitoring">
+    <meta name="author" content="Cell Info">
+    <meta name="hide_ratings_widget" value="true" />
+    <meta property="og:title" content="Cell Info" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="index.html" />
+    <meta property="og:image" content="template_assets/images/200x200.jpg" />
+    <meta property="og:description" content="Monitor and analyze  tools  for  mobile network data that are comming from actual mobile users."
+    />
+    <meta property="og:locale" content="en" />
+    <meta property="og:site_name" content="Cell Info mobile network analyse" />
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Cell Info",
+      "url": "https://www.cellinfo.com",
+      "logo": "https://cellinfo.com/template_assets/images/logo.png",
+      "image": "https://cellinfo.com/template_assets/images/dashboard3.jpg",
+      "description": "Mobile Networks Analysing and Monitoring.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Barbaros Mah.",
+        "addressLocality": "AtaÅŸehir",
+        "addressRegion": "Istanbul",
+        "postalCode": "34760",
+        "addressCountry": "TR"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "8:45",
+        "closes": "18:00"
+      }],
+      "telephone": "+90 (216) 999-3586"
+    }
+  </script>
+    <link rel="canonical" href="index.html" />
+    <link rel="shortcut icon" href="template_assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="template_assets/images/favicon.ico" type="image/x-icon">
+
+    <!--Jquery Bootstrap-->
+    <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Youtube Video Popup-->
+    <link rel="stylesheet" href="template_assets/plugins/videoPopup/videoPopup.css">
+    <!--Animate Svg-->
+    <link rel="stylesheet" href="template_assets/plugins/animateImg/demo.css">
+    <link rel="stylesheet" href="template_assets/plugins/animateImg/demo-grid.css">
+    <!--Owl Carousel-->
+    <link rel="stylesheet" href="template_assets/plugins/owl/owl.carousel.css">
+    <link rel="stylesheet" href="template_assets/plugins/owl/owl.theme.default.css">
+    <!--Map-->
+    <link rel="stylesheet" href="template_assets/plugins/map/map-style.css">
+    <!--Testimonials>
+    <link rel="stylesheet" type="text/css" href="template_assets/plugins/testimonial/testimonial.css"-->
+    <!--Main Css-->
+    <link rel="stylesheet" href="template_assets/css/custom.css">
+    <!--Mobile Responsive-->
+    <link rel="stylesheet" href="template_assets/css/responsive.css">
+    <!--Scroll Animations-->
+    <link rel="stylesheet" href="template_assets/plugins/waypoints/animate.css">
+
+
+    <script type="text/javascript">
+
+        var RecaptchaResetPassword = true;
+
+        function requestBack(response, whickone) {
+
+            fetch('/sendRecaptcha', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify({ captcha: response })
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data.success) {
+                        if (whickone == 'reset_password') {
+                            RecaptchaResetPassword = false;
+                            $('#reset_password_send_button').prop('disabled', false);
+                        } else {
+                            setCookie("RecaptchaWrongTry", "true", 0);
+                            $('#login_button').css({ display: "block" });
+                            $('#login_button').prop('disabled', false);
+
+                        }
+
+                    } else {
+                        if (whickone == 'reset_password') {
+                            RecaptchaResetPassword = true;
+                            $('#reset_password_send_button').prop('disabled', true);
+                        } else {
+                            $('#login_button').css({ display: "none" });
+                            $('#login_button').prop('disabled', true);
+                        }
+                    }
+
+                });
+        }
+
+        var verifyCallbackForResetPassword = function (response) {
+            requestBack(response, 'reset_password');
+        };
+        var verifyCallbackForWrong = function (response) {
+            requestBack(response, 'try3wrong');
+        };
+        var onloadCallback = function () {
+            grecaptcha.render('html_element', {
+                'sitekey': '6LfRu18UAAAAAF7bZi9zRUB1JJ-6PrGqs8yp2c52',
+                'callback': verifyCallbackForResetPassword,
+                'theme': 'light'
+            });
+
+            grecaptcha.render('wrong_recaptcha', {
+                'sitekey': '6LfRu18UAAAAAF7bZi9zRUB1JJ-6PrGqs8yp2c52',
+                'callback': verifyCallbackForWrong,
+                'theme': 'dark'
+            });
+        };
+
+        //wrong_recaptcha
+    </script>
+</head>
+
+<body>
+    <!--Preloader-->
+    <div class="se-pre-con"></div>
+    <!--Preloader-->
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <!-- Logo on dark background -->
+                    <img class="lWhite" src="template_assets/images/logo.png">
+                    <!-- Logo on white background -->
+                    <img class="lBlack" src="template_assets/images/logo_black.png">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#home-section" class="active">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about-section">About</a>
+                        </li>
+                        <li>
+                            <a href="#feature-section">Features</a>
+                        </li>
+                        <li>
+                            <a href="#advantages-section">Advantages</a>
+                        </li>
+                        <li>
+                            <a href="#contact-section">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Navigation Bar-->
+    <!--Banner Section-->
+    <section id="home-section" class="main-banner">
+        <div id="particles-js" style="position: absolute;height: 100%;width: 100%;"></div>
+        <div class="bg-gradient">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <!--Banner Left-Text-->
+                        <div id="contact_mail" class="banner-text">
+                            <h1 class="big-text">ENTERPRISE SOLUTIONS FOR GSM PARAMETERS</h1>
+                            <p class="content">
+                                The GSM Map Tool offers up-to-date insights into mobile network performance, with data gathered from daily user-initiated
+                                tests on thousands of mobile phones. We deliver data on more than 20 million tests. This
+                                data can then be used to monitor mobile carriers GSM-oriented services visually through charts
+                                and diagrams via the GSM Map Tool.
+                            </p>
+                            <button class="btn orange-btn" onclick="reset_success();" data-toggle="modal" data-target="#myModal">Contact</button>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-6 col-xs-12 pull-right">
+                        <!--Login Div-->
+                        <div class="loginDiv clearfix">
+                            <div id="gotomap_button">
+                                <div class="text-center">
+                                    <button onclick="goToTurkeyMap();">Go To Map</button>
+                                </div>
+                                <div class="text-center">
+                                    <button onclick="signOut();">Sign Out</button>
+                                </div>
+                            </div>
+                            <div id="login_form">
+                                <h2 class="login-title">Login</h2>
+                                <form class="clearfix" onsubmit="signIn();return false">
+                                    <div class="form-group">
+                                        <input class="form-control myInput" type="email" id="login_email" placeholder="Enter email" required>
+                                        <span class="input-icon">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control myInput" type="password" id="login_password" placeholder="Enter password" required>
+                                        <span class="input-icon">
+                                            <i class="fa fa-lock"></i>
+                                        </span>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="alert alert-danger" id="login_message_bx" style="display: none;" role="alert" style="height: 30px;padding: 5px;">
+                                            Wrong email / password.
+                                            <a style="cursor: pointer;" data-toggle="modal" data-target="#resetPasswordModal">Click Reset Password</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="text-align: -webkit-center;">
+                                        <div id="wrong_recaptcha" style="display: none;"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button id="login_button" onclick="addRequired()" type="submit">Continue</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">__</button>
+                    <h3 id="myModalLabel">We'd Love to Hear From You</h3>
+                </div>
+                <div class="modal-body">
+                    <div id="success_mail" style="text-align: center;">
+                        <img src="template_assets/images/checked.svg" width="50%" height="50%">
+                    </div>
+                    <div id="mail_body">
+                        <form class="form-horizontal col-md-12 col-sm-12" onsubmit="sendEmail('mail');return false" id="emailForm">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input class="form-control required" placeholder="Your Name" data-placement="top" data-trigger="manual" name="name" data-content="Must be at least 3 characters long, and must only contain letters."
+                                    type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Surname</label>
+                                <input class="form-control required" placeholder="Your Surname" data-placement="top" data-trigger="manual" name="surname"
+                                    data-content="Must be at least 3 characters long, and must only contain letters." type="text"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label>Company Name</label>
+                                <input class="form-control required" placeholder="Your Company Name" data-placement="top" data-trigger="manual" name="companyname"
+                                    data-content="Must be at least 3 characters long, and must only contain letters." type="text"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label>E-Mail Address</label>
+                                <input class="form-control email" type="email" placeholder="email@you.com" data-placement="top" data-trigger="manual" name="email"
+                                    data-content="Must be a valid e-mail address (user@gmail.com)" type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <div class="col-md-12 col-sm-12" style="padding: 0;">
+                                    <div class="col-md-3 col-sm-3" style="padding: 0;">
+                                        <input class="form-control phone" placeholder="Country Code" data-placement="top" name="countrycode" data-trigger="manual"
+                                            data-content="+90" type="text" required>
+                                    </div>
+                                    <div class="col-md-9 col-sm-9" style="padding: 0;">
+                                        <input class="form-control phone" placeholder="999-999-9999" data-placement="top" name="phonenumber" data-trigger="manual"
+                                            data-content="Must be a valid phone number (999-999-9999)" type="text" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn  btn-sigma pull-right">Send</button>
+                                <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start : Reset Password Send-->
+    <div id="resetPasswordModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="resetPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">__</button>
+                    <h3 id="resetPasswordModalLabel">Reset Password</h3>
+                </div>
+                <div class="modal-body">
+                    <div id="mail_body">
+                        <form class="form-horizontal col-md-12 col-sm-12" onsubmit="resetPassword();return false">
+
+                            <div class="form-group">
+                                <label>E-Mail Address</label>
+                                <input id="reset_password_email" class="form-control email" type="email" placeholder="email@you.com" data-placement="top"
+                                    data-trigger="manual" name="email" data-content="Must be a valid e-mail address (user@gmail.com)"
+                                    type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <div id="html_element"></div>
+                            </div>
+                            <div class="form-group">
+                                <button id="reset_password_send_button" type="submit" class="btn  btn-sigma pull-right" disabled>Send</button>
+                                <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End : Reset Password Send-->
+    <!--Banner Section-->
+    <!--Services Section-->
+    <section id="about-section" class="bg-color sectionP30">
+        <div class="container">
+            <div class="row">
+                <!--Service 1-->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="service animated fadeup">
+                        <div class="service-icon">
+                            <i class="fa fa-clock-o light"></i>
+                        </div>
+                        <h3 class="service-title">REAL DATA</h3>
+                        <p class="service-desc">The data is collected via SDK from our mobile apps which are published in almost every category in
+                            the Google Play and App Store</p>
+                    </div>
+                </div>
+                <!--Service 1-->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="service animated fadeup" style="animation-delay: .15s;">
+                        <div class="service-icon">
+                            <i class="fa fa-map-o"></i>
+                        </div>
+                        <h3 class="service-title">VISUAL TOOLS</h3>
+                        <p class="service-desc">For the best visual representation of the data it is displayed in maps, graphics, diagrams and tables.</p>
+                    </div>
+                </div>
+                <!--Service 1-->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="service animated fadeup" style="animation-delay: .3s;">
+                        <div class="service-icon">
+                            <i class="fa fa-database"></i>
+                        </div>
+                        <h3 class="service-title">ANALYSIS & COMPARISON</h3>
+                        <p class="service-desc">All data is analyzed in real-time using the most effective functions. Data can then be filtered by
+                            mobile carrier, network access technology, city or time in order to view all of the results from
+                            different perspectives with comparison charts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Services Section-->
+    <!--Who we are Section-->
+    <section id="info-section" class="sectionP60">
+        <div class="container">
+            <div class="col-md-5 col-sm-12 col-xs-12">
+                <!--Section Heading-->
+                <div class="heading animated fadeInLeft">
+                    <h1>WHAT IS CELL INFO?</h1>
+                    <span>W</span>
+                </div>
+                <div class="content animated fadeInLeft">
+                    <p>The GSM Information Map is a tool which provides aggregated data from real sources and analyses them
+                        in real time. The GSM Information parameters such as internet speed, PING, signal strength, access
+                        technology, barrier & carrier, mobile devices can be filtered and compared by city, mobile operator
+                        and network access technology.</p>
+                    <!--p class="highlight-text">dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p-->
+                </div>
+            </div>
+            <!--Youtube Video Thumb-->
+            <div class="col-md-6 col-md-offset-1 col-sm-8 col-sm-offset-0 col-xs-12">
+                <div class="orange-div animated fadedown" style="animation-delay: .45s;"></div>
+                <div class="video-thumb animated fadeInRight">
+                    <!--Youtube Video Link-->
+                    <a class="videoPopup" data-toggle="modal" data-target="#videoModal">
+                        <span class="play-icon">
+                            <i class="fa fa-play light"></i>
+                        </span>
+                    </a>
+                    <!--Video Thumb Image-->
+                    <img class="img-responsive" src="template_assets/images/video_image.jpg" alt="image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal -->
+    <div id="videoModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" style="position: relative;margin-top: 50vh;transform: translateY(-50%);">
+            <button type="button" data-dismiss="modal" aria-hidden="true" style="color: #af924e">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+            <video width="100%" controls>
+                <source src="template_assets/video/cellinfo.qt" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <!--Services Section-->
+    <!--Counters Section-->
+    <section id="counter-section" class="sectionP60">
+        <div class="container">
+            <!--Counter 1-->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="counter animated fadeup">
+                    <!--Counter title->
+                    <p class="counter-title"><i class="fa fa-eye"></i>Views</p>
+                    <!-Counter Value->
+                    <h1 class="numbers numscroller" data-min='0000' data-max='165569' data-delay='1' data-increment='675'></h1>
+                    <span class="small-text">+869,214 since last month</span>
+
+                    <!-Counter graph Svg->
+                    <div class="graph">
+                        <img src="template_assets/images/graphSvgs/graph-1.svg" class="svg graph">
+                    </div-->
+                </div>
+            </div>
+            <!--Counter 1-->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="counter animated fadeup" style="animation-delay: .15s;">
+                    <!--Counter title-->
+                    <p class="counter-title">
+                        <i class="fa fa-bar-chart"></i>Real time data</p>
+                    <h1 class="numbers numscroller" id="counter_test"></h1>
+                    <!--Counter Value->
+                    <h1 class="numbers numscroller" id="counter_up" data-slno='1' data-min='0' data-max='400000' data-delay='100000' data-increment="1"></h1-->
+                    <span class="small-text">+869,214 since last month</span>
+                    <!--Counter graph Svg-->
+                    <div class="graph">
+                        <img src="template_assets/images/graphSvgs/graph-2.svg" class="svg graph">
+                    </div>
+                </div>
+            </div>
+            <!--Counter 1-->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="counter animated fadeup" style="animation-delay: .3s;">
+                    <!--Counter title->
+                    <p class="counter-title"><i class="fa fa-heart"></i>Likes</p>
+                    <!-Counter Value->
+                    <h1 class="numbers numscroller" data-min='0000' data-max='185482' data-delay='1' data-increment='675'></h1>
+                    <span class="small-text">+869,214 since last month</span>
+
+                    <!-Counter graph Svg->
+                    <div class="graph">
+                        <img src="template_assets/images/graphSvgs/graph-3.svg" class="svg graph">
+                    </div-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Counters Section-->
+    <!--Our Features Section-->
+    <section id="feature-section" class="bg-img our_feautres">
+        <div class="bgTColor sectionP60">
+            <div class="container">
+                <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                    <!--Section Heading-->
+                    <div class="heading dark-bg text-center animated fadedown">
+                        <h1>OUR FEATURES</h1>
+                        <span>O</span>
+                    </div>
+                    <div class="content animated fadeup">
+                        <p class="white">The back-end side implemented in the GSM Information Map is cleared of inaccurate data through an
+                            advanced filtering mechanism. The in-put data is checked with an authentication function that
+                            guarantees the accuracy and validity of all data displayed in the GSM information Map.</p>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 sectionP40">
+                    <!--Feature 1-->
+                    <div class="col-md-3 col-sm-3 col-xs-12 p0">
+                        <div class="feature animated fadein">
+                            <div class="feature-icon">
+                                <i class="fa fa-clock-o light"></i>
+                            </div>
+                            <h4 class="feature-title">Real Time ThroughPut Changes</h4>
+                            <p class="feature-desc">The GSM Information Map service provides Internet speed changes in real time on a map with user-friendly
+                                diagrams and tables.
+                            </p>
+                        </div>
+                    </div>
+                    <!--Feature 2-->
+                    <div class="col-md-3 col-sm-3 col-xs-12 p0">
+                        <div class="feature animated fadein" style="animation-delay: .15s;">
+                            <div class="feature-icon">
+                                <i class="fa fa-space-shuttle light"></i>
+                            </div>
+                            <h4 class="feature-title">Internet Speed</h4>
+                            <p class="feature-desc">Testing internet speed will help to investigate network performance and provide access to the
+                                information in real time.
+                            </p>
+                        </div>
+                    </div>
+                    <!--Feature 3-->
+                    <div class="col-md-3 col-sm-3 col-xs-12 p0">
+                        <div class="feature animated fadein" style="animation-delay: .3s;">
+                            <div class="feature-icon">
+                                <i class="fa fa-exchange light"></i>
+                            </div>
+                            <h4 class="feature-title">RSRP and RSSNR Changes</h4>
+                            <p class="feature-desc">Ability to monitor all changes of the RSRP and RSSNR. This is due to the critical importance
+                                of signal strength to properly interpret network performance measurement results.
+                            </p>
+                        </div>
+                    </div>
+                    <!--Feature 4-->
+                    <div class="col-md-3 col-sm-3 col-xs-12 p0">
+                        <div class="feature animated fadein" style="animation-delay: .45s;">
+                            <div class="feature-icon">
+                                <i class="fa fa-tasks light"></i>
+                            </div>
+                            <h4 class="feature-title">RSRP, RSRQ & RSSNR</h4>
+                            <p class="feature-desc">GSM metrics that provide a key measure of signal level and quality.
+                            </p>
+                        </div>
+                    </div>
+                    <!--Feature 5-->
+                    <div class="col-md-3 col-sm-3 col-xs-12 p0">
+                        <div class="feature animated fadein">
+                            <div class="feature-icon">
+                                <i class="fa fa-window-restore light" aria-hidden="true"></i>
+                            </div>
+                            <h4 class="feature-title">Access Technology</h4>
+                            <p class="feature-desc">Filter between the technology used to access your services and compare them against other metrics
+                                with graphics to measure the performance.</p>
+                        </div>
+                    </div>
+                    <!--Feature 6-->
+                    <div class="col-md-3 col-sm-3 col-xs-12 p0">
+                        <div class="feature animated fadein" style="animation-delay: .15s;">
+                            <div class="feature-icon">
+                                <i class="fa fa-signal light"></i>
+                            </div>
+                            <h4 class="feature-title">Signal Strength</h4>
+                            <p class="feature-desc">Measure the Signal Strength of a network in real time and have them displayed in graphics and
+                                diagrams for ease of comparison</p>
+                        </div>
+                    </div>
+                    <!--Feature 7-->
+                    <div class="col-md-3 col-sm-3 col-xs-12 p0">
+                        <div class="feature animated fadein" style="animation-delay: .3s;">
+                            <div class="feature-icon">
+                                <i class="fa fa-database light"></i>
+                            </div>
+                            <h4 class="feature-title">Frequency Band</h4>
+                            <p class="feature-desc">Real time comparisons of the frequency band by accessing network technology which is being displayed
+                                in graphics and also all these can be filtered by location</p>
+                        </div>
+                    </div>
+                    <!--Feature 8-->
+                    <div class="col-md-3 col-sm-3 col-xs-12 p0">
+                        <div class="feature animated fadein" style="animation-delay: .45s;     padding-top: 6px;">
+                            <div class="feature-icon" style="    margin-bottom: 4px;">
+                                <i class="fa fa-mobile-phone light" style="font-size: 51px;"></i>
+                            </div>
+                            <h4 class="feature-title">Phone Type</h4>
+                            <p class="feature-desc">Compare the type of mobile device being used by the population and filter it by operator and
+                                network access technology 2G, 3G, 4G.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Our Features Section-->
+    <!--Reasons Section 1-->
+    <section id="advantages-section" class="sectionP60" style="background: #fff;">
+        <div class="container">
+            <!--Laptop Image-->
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12">
+                <img class="img-responsive animated bounce" src="template_assets/images/800x532-1.jpg" alt="image">
+            </div>
+            <div class="col-md-5 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12">
+                <!--Section Heading-->
+                <div class="heading animated fadeInRight">
+                    <h1>Advantages of Cell Info</h1>
+                    <span>A</span>
+                </div>
+                <!--All Reasons-->
+                <ul class="ul-style">
+                    <li class="animated fadeInRight"> Displays only accurate and verified data </li>
+                    <li class="animated fadeInRight"> Authentication technologies to filter and eliminate inaccurate data </li>
+                    <li class="animated fadeInRight"> Data is sourced through thousands of mobile app users </li>
+                    <li class="animated fadeInRight"> Utilises the fastest functions for data analysis</li>
+                    <li class="animated fadeInRight"> Conducts and displays analysis in real time </li>
+                    <li class="animated fadeInRight"> User friendly interface</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--Reasons Section 1-->
+    <!--Reasons Section 2.1-->
+    <section class="sectionP60" style="background: #fff; padding-bottom: 0px;">
+        <div class="container">
+            <!--Iphone Image-->
+            <div class="heading animated fadeInRight">
+                <h1>Cell Info Dashboard</h1>
+                <h4>Internet Speed Averages</h4>
+            </div>
+            <div class="col-12 pull-right resFloat">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/dashboard1.jpg" alt="image">
+            </div>
+        </div>
+    </section>
+    <!--Reasons Section 2.1-->
+    <!--Reasons Section 2.2-->
+    <section class="sectionP60" style="background: #fff; padding-bottom: 0px;">
+        <div class="container">
+            <!--Iphone Image-->
+            <div class="heading animated fadeInRight">
+                <h1>Signal Strengths of Apple and Android</h1>
+            </div>
+            <div class="col-12 pull-right resFloat">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/dashboard2.jpg" alt="image">
+            </div>
+        </div>
+    </section>
+    <!--Reasons Section 2.2-->
+    <!--Reasons Section 2.3-->
+    <section class="sectionP60" style="background: #fff; padding-bottom: 0px;">
+        <div class="container">
+            <!--Iphone Image-->
+            <div class="heading animated fadeInRight">
+                <h1>ThroughPut Benchmark</h1>
+            </div>
+            <div class="col-12 pull-right resFloat">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/dashboard3.jpg" alt="image">
+            </div>
+        </div>
+    </section>
+    <!--Reasons Section 2.3-->
+    <!--Reasons Section 2.4-->
+    <section class="sectionP60" style="background: #fff; padding-bottom: 0px;">
+        <div class="container">
+            <!--Iphone Image-->
+            <div class="heading animated fadeInRight">
+                <h1>Set Your Alarm</h1>
+            </div>
+            <div class="col-12 pull-right resFloat">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/set_your_alarm.jpg" alt="image">
+            </div>
+        </div>
+    </section>
+    <!--Reasons Section 2.4-->
+    <!--Reasons Section 2-->
+    <section class="sectionP60" style="background: #fff; padding-bottom: 0px;">
+        <div class="container">
+            <!--Iphone Image-->
+            <div class="heading animated fadeInRight">
+                <h1>Real Time ThroughPut Changes</h1>
+            </div>
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 pull-right resFloat">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/1-download.jpg" alt="image">
+            </div>
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 pull-right resFloat">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/2-upload.jpg" alt="image">
+            </div>
+        </div>
+    </section>
+    <!--Reasons Section 2-->
+    <!--Reasons Section 3-->
+    <section class="sectionP60" style="background: #fff; padding-top: 0px;">
+        <div class="container">
+            <div class="heading animated fadeInRight">
+                <h1>Internet Speed</h1>
+            </div>
+            <!--Iphone Image-->
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 pull-right resFloat">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/internetspeed1.jpg" alt="image">
+            </div>
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/internetspeed2.jpg" alt="image">
+            </div>
+        </div>
+    </section>
+    <!--Reasons Section 3-->
+    <!--Reasons Section 4-->
+    <section class="sectionP60" style="background: #fff; padding-top: 0px;">
+        <div class="container">
+            <div class="heading animated fadeInRight">
+                <h1>RSRP and RSSNR Changes</h1>
+            </div>
+            <!--Iphone Image-->
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 pull-right resFloat">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/rss1.jpg" alt="image">
+            </div>
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/rss2.jpg" alt="image">
+            </div>
+        </div>
+    </section>
+    <!--Reasons Section 4-->
+    <!--Reasons Section 5-->
+    <section class="sectionP60" style="background: #fff; padding-top: 0px;">
+        <div class="container">
+            <div class="heading animated fadeInRight">
+                <h1>Access Technology</h1>
+            </div>
+            <!--Iphone Image-->
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 pull-right resFloat">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/network1.jpg" alt="image">
+            </div>
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/network2.jpg" alt="image">
+            </div>
+        </div>
+    </section>
+    <!--Reasons Section 5-->
+    <!--Reasons Section 6-->
+    <section class="sectionP60" style="background: #fff; padding-top: 0px;">
+        <div class="container">
+            <div class="heading animated fadeInRight">
+                <h1>Signal Strength</h1>
+            </div>
+            <!--Iphone Image-->
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 pull-right resFloat">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/signal1.jpg" alt="image">
+            </div>
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/signal2.jpg" alt="image">
+            </div>
+        </div>
+    </section>
+    <!--Reasons Section 6-->
+    <!--Reasons Section 7-->
+    <section class="sectionP60" style="background: #fff; padding-top: 0px;">
+        <div class="container">
+            <div class="heading animated fadeInRight">
+                <h1>Frequency Band</h1>
+            </div>
+            <!--Iphone Image-->
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 pull-right resFloat">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/frequency1.jpg" alt="image">
+            </div>
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/frequency2.jpg" alt="image">
+            </div>
+        </div>
+    </section>
+    <!--Reasons Section 7-->
+    <!--Reasons Section 8-->
+    <section class="sectionP60" style="background: #fff; padding-top: 0px;">
+        <div class="container">
+            <div class="heading animated fadeInRight">
+                <h1>Phone Type</h1>
+            </div>
+            <!--Iphone Image-->
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 pull-right resFloat">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/phonetype1.jpg" alt="image">
+            </div>
+            <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12">
+                <img class="img-responsive animated animated bounce" src="template_assets/images/phonetype2.jpg" alt="image">
+            </div>
+        </div>
+    </section>
+    <!--Reasons Section 8-->
+    <!-- Footer Section -->
+    <section id="contact-section" class="footer footer-bg">
+        <div class="bg-gradient-down sectionP60 pb0">
+            <div class="container">
+                <div class="col-md-7 col-sm-7 col-xs-12 pull-right resCont">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <!--Contact Form Heading-->
+                        <div class="heading dark-bg animated fadeInRight">
+                            <h1>Get in touch.</h1>
+                            <span>G</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <!--Contact Form-->
+                            <form onsubmit="sendEmail('message');return false" id="messageForm">
+                                <div class="form-group col-sm-6 animated fadeup">
+                                    <input class="myInput" placeholder="Full Name" name="fullname" type="text" required>
+                                    <span class="input-icon">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                </div>
+                                <div class="form-group col-sm-6 animated fadeup" style="animation-delay: .15s">
+                                    <input class="myInput" placeholder="Email Address" name="email" type="email" required>
+                                    <span class="input-icon">
+                                        <i class="fa fa-envelope-o"></i>
+                                    </span>
+                                </div>
+                                <div class="form-group col-sm-6 animated fadeup">
+                                    <input class="myInput" placeholder="Mobile or Telephone" name="phonenumber" type="text" required>
+                                    <span class="input-icon">
+                                        <i class="fa fa-phone"></i>
+                                    </span>
+                                </div>
+                                <div class="form-group col-sm-6 animated fadeup" style="animation-delay: .15s">
+                                    <input class="myInput" placeholder="Subject" name="subject" type="text" required>
+                                    <span class="input-icon">
+                                        <i class="fa fa-puzzle-piece"></i>
+                                    </span>
+                                </div>
+                                <div class="form-group col-sm-12 animated fadeup">
+                                    <textarea class="myInput" placeholder="Type your message here..." name="message" id="" cols="30" rows="4"></textarea>
+                                    <span class="input-icon">
+                                        <i class="fa fa-comments"></i>
+                                    </span>
+                                </div>
+                                <div class="col-sm-12 animated fadeup" style="animation-delay: .15s">
+                                    <img id="message_checked" src="template_assets/images/checked.svg" width="30px" height="30px" style="position: absolute;">
+                                    <button type="submit" class="btn orange-btn pull-right">Send Message</button>
+                                </div>
+                            </form>
+                            <!--Testimonial 1-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-5 col-xs-12 border-right resCompany">
+                    <div class="company-desc logoo animated fadeup">
+                        <!--Footer Logo Image-->
+                        <a href="#home-section">
+                            <img class="img-responsive" src="template_assets/images/logo.png" />
+                        </a>
+                        <!-- Company Description-->
+                        <div class="content">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="#contact_mail" class="highlight-text" style="text-decoration: underline !important; background-color: transparent !important;">Contact now for your enterprise solutions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Meet Us Part->
+                    <div class="meet-us animated fadeup">
+                        <h3 class="foot-title">MEET US</h3>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad atque corporis dignissimos eius eos est explicabo.</p>
+                        </div>
+                    </div>
+                    <!-Contact Us Details->
+                    <div class="cont-us animated fadeup">
+                        <h3 class="foot-title">Contact Us</h3>
+                        <div><a class="hover" href="javascript:;">Landline : +061 - 1234 - 5678</a></div>
+                        <div><a class="hover" href="javascript:;">Mobile : +1 987654 - 3210</a></div>
+                        <div><a class="hover" href="javascript:;">Email : info@example.com</a></div>
+                    </div-->
+                </div>
+                <!--Copyright Text-->
+                <div class="col-md-12 col-sm-12 col-xs-12 sectionP40">
+                    <div class="copyright animated fadeup">
+                        <p class="white">&copy; Copyright 2018. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <script src="../ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!--Particle Js-->
+    <script type="text/javascript" src="template_assets/js/particle_system/particles.js"></script>
+    <!--Particle (Setting)App Js-->
+    <script type="text/javascript" src="template_assets/js/particle_system/app.js"></script>
+    <!--Animae Js-->
+    <script type="text/javascript" src="template_assets/js/anime.min.js"></script>
+    <!--Counter | NumbScroller Js-->
+    <script type="text/javascript" src="template_assets/plugins/numScroll/numscroller-1.0.js"></script>
+    <!--Custom | Nice Scroll Js-->
+    <script type="text/javascript" src="template_assets/plugins/niceScroll/niceScroll.min.js"></script>
+    <!--Youtube Video Popup Js-->
+    <!-- <script type="text/javascript" src="template_assets/plugins/videoPopup/videoPopup.jquery.js"></script> -->
+    <!--Convert Svg Image to Inline Svg Js
+<script type="text/javascript" src="template_assets/plugins/svgtoinline/jquery-svg-to-inline.js"></script>-->
+    <!--Animate | Draw Svg-->
+    <script type="text/javascript" src="template_assets/plugins/drawSvg/jquery.drawsvg.js"></script>
+    <!--Our Team | Pieces Js-->
+    <script type="text/javascript" src="template_assets/plugins/animateImg/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="template_assets/plugins/animateImg/animateImg.js"></script>
+    <script type="text/javascript" src="template_assets/plugins/animateImg/piecesanimate.js"></script>
+    <!--Testimonials Js-->
+    <script type="text/javascript" src="template_assets/plugins/testimonial/testimonial.js"></script>
+    <!--Owl Carousel Js-->
+    <script type="text/javascript" src="template_assets/plugins/owl/owl.carousel.js"></script>
+    <!--Map-Google-jQuery-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmiJjq5DIg_K9fv6RE72OY__p9jz0YTMI"></script>
+    <!--Map-Javascript-->
+    <!--script type="text/javascript" src="template_assets/plugins/map/map.js"></script-->
+    <!--Scroll Animations | Waypoints Js
+<script type="text/javascript" src="template_assets/plugins/waypoints/waypoint.js"></script>
+<script type="text/javascript" src="template_assets/plugins/waypoints/animation.js"></script>-->
+    <!--Main | Common Js-->
+    <script type="text/javascript" src="template_assets/js/main.js"></script>
+    <!-- Mail -->
+    <script type="text/javascript" src="template_assets/js/mail.js"></script>
+    <!-- Firebase -->
+    <script src="../www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script type="text/javascript" src="template_assets/js/firebase.js"></script>
+    <script type="text/javascript" src="template_assets/js/index.js"></script>
+
+    <!-- reCAPTCHA -->
+    <script src="../www.google.com/recaptcha/api85f1.js?onload=onloadCallback&amp;render=explicit" async defer>
+    </script>
+
+    <!-- SweetAlert -->
+    <script src="../unpkg.com/sweetalert2%407.22.2/dist/sweetalert2.all.js"></script>
+
+    <!-- Cookkie -->
+    <script type="text/javascript" src="template_assets/js/cookie.js"></script>
+</body>
+<script type="text/javascript">
+    timerCounter();
+
+    if (checkCookie("RecaptchaWrongTry")) {
+        $('#login_button').css({ display: "none" });
+          document.getElementById("wrong_recaptcha").style.display = "block";
+    }
+</script>
+
+
+<!-- Mirrored from cellinfo.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 May 2020 08:45:41 GMT -->
+</html>

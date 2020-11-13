@@ -1,0 +1,342 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="View_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Styles/sanpham.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/layout.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/maxheight.js" type="text/javascript"></script>
+  
+    <style type="text/css">
+        .style1
+        {
+            color: #0000FF;
+        }
+    </style>
+
+</head>
+<!-- Chu chuyen dong-->
+ <script language="JavaScript" type="text/javascript">
+     window.setInterval('settime()', 1000);
+
+     st = "Ice Cream website was designed by Đặng Hồng Thái ! ";
+     function chuchuyendong() {
+         //lay ki tu dau tien 
+         ch = st.charAt(0);
+         //lay 1 chuoi con duoc cat tu vi tri thu 2 den het chuoi
+         stcon = st.substring(1);
+         //ghep
+         st = stcon + ch;
+         //in chuoi
+         document.title = st;
+     }
+     window.setInterval('chuchuyendong()', 500);
+ </script>
+<!-- end chu chuyen dong-->
+<body id="page1" onload="new ElementMaxHeight();">
+    <form id="form1" runat="server">
+    <!-- dynamic image-->
+    <!--
+    <h2 id="fly">Thanks for visiting!</h2>
+
+<script type="text/javascript">
+
+    //Configure message to display. Use "$" for linebreak
+    //By default, set to just grab the text from element with ID="fly"
+    message = document.getElementById("fly").innerHTML; // $ = taking a new line
+    distance = 50; // pixel(s)
+    speed = 200; // milliseconds
+
+    var txt = "",
+	num = 0,
+	num4 = 0,
+	flyofle = "",
+	flyofwi = "",
+	flyofto = "",
+	fly = document.getElementById("fly");
+
+
+    function stfly() {
+        for (i = 0; i != message.length; i++) {
+            if (message.charAt(i) != "$")
+                txt += "<span style='position:relative;visibility:hidden;' id='n" + i + "'>" + message.charAt(i) + "<\/span>";
+            else
+                txt += "<br>";
+        }
+        fly.innerHTML = txt;
+        txt = "";
+        flyofle = fly.offsetLeft;
+        flyofwi = fly.offsetWidth;
+        flyofto = fly.offsetTop;
+        fly2b();
+    }
+
+    function fly2b() {
+        if (num4 != message.length) {
+            if (message.charAt(num4) != "$") {
+                var then = document.getElementById("n" + num4);
+                then.style.left = flyofle - then.offsetLeft + flyofwi / 2;
+                then.style.top = flyofto - then.offsetTop + distance;
+                fly3(then.id, parseInt(then.style.left), parseInt(then.style.left) / 5, parseInt(then.style.top), parseInt(then.style.top) / 5);
+            }
+            num4++;
+            setTimeout("fly2b()", speed);
+        }
+    }
+
+    function fly3(target, lef2, num2, top2, num3) {
+        if ((Math.floor(top2) != 0 && Math.floor(top2) != -1) || (Math.floor(lef2) != 0 && Math.floor(lef2) != -1)) {
+            if (lef2 >= 0)
+                lef2 -= num2;
+            else
+                lef2 += num2 * -1;
+            if (Math.floor(lef2) != -1) {
+                document.getElementById(target).style.visibility = "visible";
+                document.getElementById(target).style.left = Math.floor(lef2);
+            } else {
+                document.getElementById(target).style.visibility = "visible";
+                document.getElementById(target).style.left = Math.floor(lef2 + 1);
+            }
+            if (lef2 >= 0)
+                top2 -= num3
+            else
+                top2 += num3 * -1;
+            if (Math.floor(top2) != -1)
+                document.getElementById(target).style.top = Math.floor(top2);
+            else
+                document.getElementById(target).style.top = Math.floor(top2 + 1);
+            setTimeout("fly3('" + target + "'," + lef2 + "," + num2 + "," + top2 + "," + num3 + ")", 50)
+        }
+    }
+
+    stfly()
+
+</script>
+-->
+<!-- end dynamic image-->
+    <div id="main">
+  <!-- header -->
+  <div id="header">
+    <div class="row-1">
+      <div class="wrapper">
+        <div class="logo">
+          <h1><a href="#">Ice Cream </a></h1>
+          <em>Parlor</em> <strong>Reliable Address</strong> </div>
+        <div class="phones"> 0 973 948 970<br />
+          0942 17 03 05</div>
+      </div>
+    </div>
+    <div class="row-2">
+      <div class="indent">
+        <!-- header-box begin -->
+        <div class="header-box">
+          <div class="inner">
+            <ul class="nav">
+              <li><a href="Home.aspx">Home page</a></li>
+              <li><a href="AddRecipe.aspx">Add Recipe</a></li>
+              <li><a href="FreeRecipe.aspx">Free Recipe</a></li>
+              
+              <li><a href="Registrator.aspx">Registration</a></li>
+              <li><a href="ContactUs.aspx">Contact Us</a></li>
+              <li><a href="Feedback.aspx">Feedback</a></li>
+             <!-- <li><a href="Home.aspx">Log out</a></li>-->
+             
+            </ul>
+          </div>
+        </div>
+        <!-- header-box end -->
+        
+      </div>
+    </div>
+  </div>
+  <!-- content -->
+  <div id="content">
+    <div class="wrapper">
+      <div class="aside maxheight">
+        <!-- box begin -->
+        <div class="box maxheight">
+          <div class="inner">
+
+          <div class="titlesidebar">
+              &nbsp;&nbsp; &nbsp;<asp:Label ID="lbstatus" 
+                  runat="server" Text="Login here"></asp:Label>
+          </div>
+    
+             <!-- div login -->
+        <div class="login"> 
+       <asp:Panel ID="pnlogin" runat="server" EnableViewState="true" 
+           Visible="true" Width="200px">
+       <table style="width:70%;" cellpadding="0" cellspacing="0">
+           <tr>
+               <td >
+               <img src="../images/imagepage/taychi.gif" />
+                    </td>
+               <td >
+                   
+                   <span id="spanlogin" class="style1">Login&nbsp;</span>| <asp:LinkButton ID="linkLogout2" runat="server" onclick="lbtlogout_Click" EnableViewState="False">Log out</asp:LinkButton></td>
+            </tr>
+           <tr>
+               <td >
+                   <span class="style1">Username</span> </td>
+               <td >
+                   <asp:TextBox ID="txtuser" runat="server" Width="90px"></asp:TextBox>
+               </td>
+            </tr>
+               <tr>
+               <td>
+                   <span class="style1">Password</span> </td>
+               <td>
+                   <asp:TextBox ID="txtpass" runat="server" TextMode="Password" Width="90px"></asp:TextBox>
+               </td>
+               <td>
+                   <asp:ImageButton ID="btlogin" runat="server" 
+                       ImageUrl="~/images/imagecommon/btlogin.gif" Width="25px" 
+                       onclick="btlogin_Click" /> 
+                      
+               </td>
+           </tr>
+           <tr>
+                <td></td>
+                <td>
+                
+                </td>
+           </tr>
+       </table>
+            
+    </asp:Panel></div>
+    <!-- end div login -->
+    <!-- div cart-->
+    <div class="viewbasket">
+         <div class="titleleftside"> Your cart</div>
+
+         <div class="contentcart">
+	       <span style="color:Blue">Amount product: 0</span><br />
+          <span style="color:Blue"> Money: 0 $</span><br /><br />
+           <img src="../images/imagecommon/anhgiohangmoi.jpg" />&nbsp; <a href="Cart.aspx" style="color:Red">View cart</a>
+
+           </div>
+                </div>
+
+      <!-- end cart-->
+   
+  
+      <div style="margin-top:10px">
+      <div class="hotrotructuyen">
+    	<div class="titleleftside"> Support online</div>
+		<div class="noidunghotro">
+			<span class="tieudehotro" style="padding-left:8px"> Mr: Thái </span><br />
+            
+			<span class="sdthotro"> <span style="color:#45A07A">Phone: </span>0973948970 <img src="../images/imagepage/onlinenowimage.jpg" /></span>
+			<p />
+			<span class="tieudehotro"> Consultant </span><br />
+			<span class="sdthotro"> <span style="color:#45A07A">Phone:</span> 0996707081 <img src="../images/imagepage/onlinenowimage.jpg" /></span>
+			<p />
+			<span style=" margin-left:40px;color:#45A07A; text-align:center; margin-top:10px; font-size:14px"> Technical support </span><br />
+			<span class="sdthotro"><span style="color:#45A07A">Phone:</span> 0973948970 <img src="../images/imagepage/onlinenowimage.jpg" /></span>
+		</div> <!-- end .noidunghotro-->
+</div><!-- end .hotrotructuyen-->
+      </div>
+      
+      <!-- div flavor side-->
+           <div class="viewflavorside">
+            <div class="titleleftside">Newest flavor &nbsp;<img src="../images/imagepage/hot%20(1).gif" /> </div>
+                <div class="contentflavorside">
+                <asp:DataList ID="dtlistflavor" runat="server">
+                            <ItemTemplate>
+                            <ul>
+								<img src="../images/imageflavor/<%#Eval("FImage") %>" style="width:110px; height:92px;"/>
+								<br /><%# "Flavor: "+Eval("FName") %> &nbsp;<img src="../images/imagepage/hot%20(1).gif" /> <br />
+
+                                
+							</ul>
+                            
+                            </ItemTemplate>
+                            </asp:DataList>
+                </div>
+              
+           </div>
+       <!-- end div flavor-->
+
+
+       <!-- div book side-->
+           <div class="viewbookside">
+                    
+                <div class="titleleftside">Newest book  &nbsp;<img src="../images/imagepage/hot%20(1).gif" /> </div>
+                    <div class="contentbookside">
+                         <asp:DataList ID="DataListBook" runat="server">
+                            <ItemTemplate>
+                            <ul>
+								<img src="../images/imagebook/<%#Eval("Image") %>" style="width:110px; height:92px;"/>
+								<br /><%# "Name: "+Eval("Bname") %> &nbsp;<img src="../images/imagepage/hot%20(1).gif" /> <br />
+							</ul>
+                            </ItemTemplate>
+                            </asp:DataList>
+                    </div>
+           </div>
+       <!-- end div flavor-->
+
+          </div>
+        </div>
+        <!-- box end -->
+      </div>
+      <div class="content">
+        <div class="indent">
+        <!--  <h2>Ice Cream parlor is happy to welcome you!</h2> -->
+           
+           <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <p>
+                <br />
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+          &nbsp;<div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <div id="footer">
+    <ul class="nav">
+    <li><a href="Home.aspx" class="current">Home page</a></li>
+              <li><a href="AddRecipe.aspx">Add Recipe</a></li>
+              <li><a href="FreeRecipe.aspx">Free Recipe</a></li>
+              <li><a href="ContactUs.aspx">Contact Us</a></li>
+      <li><asp:LinkButton ID="LinkButton1" runat="server" onclick="lbtlogout_Click">Log out</asp:LinkButton></li>
+    </ul>
+    <div class="wrapper">
+      <div class="fleft">&nbsp;Copyright &copy; 2013 Dang Hong Thai. All Rights Reserved</div>
+      <div class="fright">Designed by Dang Hong Thai&nbsp; </div>
+    </div>
+  </div>
+</div>
+<div align=center>This website was designed by Dang Hong Thai</div>
+    
+    </form>
+</body>
+</html>

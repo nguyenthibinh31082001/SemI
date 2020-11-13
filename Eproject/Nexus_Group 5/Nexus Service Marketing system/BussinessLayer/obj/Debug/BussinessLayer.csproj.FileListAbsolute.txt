@@ -1,0 +1,70 @@
+C:\inetpub\wwwroot\Nexus\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\inetpub\wwwroot\Nexus\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\inetpub\wwwroot\Nexus\BussinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\Nexus\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\inetpub\wwwroot\Nexus\BussinessLayer\obj\Debug\BussinessLayer.pdb
+C:\inetpub\wwwroot\Nexus\BussinessLayer\bin\Debug\DataLayer.dll
+C:\inetpub\wwwroot\Nexus\BussinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\Thanhle\Desktop\Completed\Source Code\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\Users\Thanhle\Desktop\Completed\Source Code\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\Users\Thanhle\Desktop\Completed\Source Code\BussinessLayer\bin\Debug\DataLayer.dll
+C:\Users\Thanhle\Desktop\Completed\Source Code\BussinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\Thanhle\Desktop\Completed\Source Code\BussinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Thanhle\Desktop\Completed\Source Code\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\Users\Thanhle\Desktop\Completed\Source Code\BussinessLayer\obj\Debug\BussinessLayer.pdb
+C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\BussinessLayer\bin\Debug\DataLayer.dll
+C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\BussinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\BussinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\Users\Giao-Su\Desktop\Nexus_Group1\Source Code\BussinessLayer\obj\Debug\BussinessLayer.pdb
+E:\Nexus_Group56\Nexus_Group1\Source Code\BussinessLayer\bin\Debug\BussinessLayer.dll
+E:\Nexus_Group56\Nexus_Group1\Source Code\BussinessLayer\bin\Debug\BussinessLayer.pdb
+E:\Nexus_Group56\Nexus_Group1\Source Code\BussinessLayer\bin\Debug\DataLayer.dll
+E:\Nexus_Group56\Nexus_Group1\Source Code\BussinessLayer\bin\Debug\DataLayer.pdb
+E:\Nexus_Group56\Nexus_Group1\Source Code\BussinessLayer\obj\Debug\ResolveAssemblyReference.cache
+E:\Nexus_Group56\Nexus_Group1\Source Code\BussinessLayer\obj\Debug\BussinessLayer.dll
+E:\Nexus_Group56\Nexus_Group1\Source Code\BussinessLayer\obj\Debug\BussinessLayer.pdb
+D:\Source Code\BussinessLayer\obj\Debug\ResolveAssemblyReference.cache
+D:\Source Code\BussinessLayer\obj\Debug\BussinessLayer.dll
+D:\Source Code\BussinessLayer\obj\Debug\BussinessLayer.pdb
+D:\Source Code\BussinessLayer\bin\Debug\BussinessLayer.dll
+D:\Source Code\BussinessLayer\bin\Debug\BussinessLayer.pdb
+D:\Source Code\BussinessLayer\bin\Debug\DataLayer.dll
+D:\Source Code\BussinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\Giao-Su\Desktop\Source Code\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\Users\Giao-Su\Desktop\Source Code\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\Users\Giao-Su\Desktop\Source Code\BussinessLayer\bin\Debug\DataLayer.dll
+C:\Users\Giao-Su\Desktop\Source Code\BussinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\Giao-Su\Desktop\Source Code\BussinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Giao-Su\Desktop\Source Code\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\Users\Giao-Su\Desktop\Source Code\BussinessLayer\obj\Debug\BussinessLayer.pdb
+C:\Users\.3.2\Desktop\Source Code\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\Users\.3.2\Desktop\Source Code\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\Users\.3.2\Desktop\Source Code\BussinessLayer\bin\Debug\DataLayer.dll
+C:\Users\.3.2\Desktop\Source Code\BussinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\.3.2\Desktop\Source Code\BussinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\.3.2\Desktop\Source Code\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\Users\.3.2\Desktop\Source Code\BussinessLayer\obj\Debug\BussinessLayer.pdb
+C:\Users\Giao-Su\Desktop\Untitled\Source Code\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\Users\Giao-Su\Desktop\Untitled\Source Code\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\Users\Giao-Su\Desktop\Untitled\Source Code\BussinessLayer\bin\Debug\DataLayer.dll
+C:\Users\Giao-Su\Desktop\Untitled\Source Code\BussinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\Giao-Su\Desktop\Untitled\Source Code\BussinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Giao-Su\Desktop\Untitled\Source Code\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\Users\Giao-Su\Desktop\Untitled\Source Code\BussinessLayer\obj\Debug\BussinessLayer.pdb
+C:\Users\.3.2\Desktop\Source Code2222\Source Code\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\Users\.3.2\Desktop\Source Code2222\Source Code\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\Users\.3.2\Desktop\Source Code2222\Source Code\BussinessLayer\bin\Debug\DataLayer.dll
+C:\Users\.3.2\Desktop\Source Code2222\Source Code\BussinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\.3.2\Desktop\Source Code2222\Source Code\BussinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\.3.2\Desktop\Source Code2222\Source Code\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\Users\.3.2\Desktop\Source Code2222\Source Code\BussinessLayer\obj\Debug\BussinessLayer.pdb
+C:\Users\Giao-Su\Downloads\Source Code2222\Source Code\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\Users\Giao-Su\Downloads\Source Code2222\Source Code\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\Users\Giao-Su\Downloads\Source Code2222\Source Code\BussinessLayer\bin\Debug\DataLayer.dll
+C:\Users\Giao-Su\Downloads\Source Code2222\Source Code\BussinessLayer\bin\Debug\DataLayer.pdb
+C:\Users\Giao-Su\Downloads\Source Code2222\Source Code\BussinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Giao-Su\Downloads\Source Code2222\Source Code\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\Users\Giao-Su\Downloads\Source Code2222\Source Code\BussinessLayer\obj\Debug\BussinessLayer.pdb

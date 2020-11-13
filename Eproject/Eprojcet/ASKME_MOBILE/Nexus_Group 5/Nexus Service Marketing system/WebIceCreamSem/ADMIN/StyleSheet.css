@@ -1,0 +1,32 @@
+﻿body {
+}
+.funtionleft
+{
+   
+    width:180px;
+    background-color:#d3e2f9;
+    height:auto;
+}
+.ul li img
+{
+    width:15px;
+    height:15px;
+    } 
+    
+.left-menu
+{
+    padding-left:10px;
+    margin-left:10px;
+    list-style-type:none;
+    text-decoration:none;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    
+    
+}
+.td-quanly-left{font-family:@Arial Unicode MS;font-size:16px; font-weight:bold;background-color:#f9fafe; color:Blue; height:30px;}
+
+.p-header{color:Blue; font-family:@Arial Unicode MS; font-weight:bold; margin-top:5px;}
+.li-left{line-height:25px;}
+.linkbt a{text-decoration:none;}

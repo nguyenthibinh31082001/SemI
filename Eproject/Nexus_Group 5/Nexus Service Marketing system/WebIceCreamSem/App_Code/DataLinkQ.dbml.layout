@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.625" name="DataLinkQ">
+  <DataContextMoniker Name="/DataLinkQDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cb177507-695a-419b-9815-328f90f15a82" absoluteBounds="6.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/DataLinkQDataContext/ADMIN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b522c94d-24d1-4b80-8bbb-1f2c3bbefc64" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="deacee2b-82ed-44e4-859b-b400507464b1" absoluteBounds="3.5, 8.375, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/DataLinkQDataContext/BOOKRECIPE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="455099a6-c317-457b-b00f-c8de3a210ea3" absoluteBounds="3.515, 8.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="89d3e036-f8d3-47b1-b32e-a502a72affac" absoluteBounds="0.75, 3.125, 2, 2.3478011067708331">
+      <DataClassMoniker Name="/DataLinkQDataContext/CUSTOMER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9331f879-caf7-4326-9daa-1225d9ea11cc" absoluteBounds="0.765, 3.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="097fc7d0-eb60-4d2b-aa99-84812dfd3d89" absoluteBounds="8.75, 3.75, 2, 2.347801106770834">
+      <DataClassMoniker Name="/DataLinkQDataContext/FEEDBACK" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7fff6bec-6e65-48f6-98a6-34f4e3eea6ae" absoluteBounds="8.765, 4.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eda6c326-8929-499a-ad1f-dd013a948956" absoluteBounds="8.75, 7.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataLinkQDataContext/FLAVOR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="460902f1-fbd7-43b3-b9b3-a4427e5e5ac7" absoluteBounds="8.765, 8.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="97a78c05-74f0-4244-861e-965e88a16f59" absoluteBounds="6.25, 4.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataLinkQDataContext/ORDERDETAIL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="613f0aaa-f763-4c7c-91ed-7b949fa69110" absoluteBounds="6.265, 5.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2304227f-82e8-4885-9815-199afdb951d9" absoluteBounds="3.5, 4, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DataLinkQDataContext/ORDER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2345dc2f-81b9-40ed-b7df-5347ea17d123" absoluteBounds="3.515, 4.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="03d3e5f3-9471-4cd1-a65c-a37bbe4eac8a" absoluteBounds="2.875, 1, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataLinkQDataContext/PAYFEE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffbe416f-b232-4106-9de9-a7486b169c0b" absoluteBounds="2.89, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bd5f3aeb-5c77-4b70-b071-b45c15aefc5a" absoluteBounds="6.25, 7, 2, 1.5785953776041675">
+      <DataClassMoniker Name="/DataLinkQDataContext/PAYMENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="20a8e8a5-2978-4677-8488-3c12687512d2" absoluteBounds="6.265, 7.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 8.375); (5.875 : 8); (5.875 : 5.41429768880208); (6.25 : 5.41429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataLinkQDataContext/BOOKRECIPE/BOOKRECIPE_ORDERDETAIL" />
+      <nodes>
+        <classShapeMoniker Id="deacee2b-82ed-44e4-859b-b400507464b1" />
+        <classShapeMoniker Id="97a78c05-74f0-4244-861e-965e88a16f59" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.95714884440104); (6.25 : 4.95714884440104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataLinkQDataContext/ORDER/ORDER_ORDERDETAIL" />
+      <nodes>
+        <classShapeMoniker Id="2304227f-82e8-4885-9815-199afdb951d9" />
+        <classShapeMoniker Id="97a78c05-74f0-4244-861e-965e88a16f59" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.73640055338542); (3.5 : 4.73640055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataLinkQDataContext/CUSTOMER/CUSTOMER_ORDER" />
+      <nodes>
+        <classShapeMoniker Id="89d3e036-f8d3-47b1-b32e-a502a72affac" />
+        <classShapeMoniker Id="2304227f-82e8-4885-9815-199afdb951d9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.125); (2.875 : 2.57859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataLinkQDataContext/CUSTOMER/CUSTOMER_PAYFEE" />
+      <nodes>
+        <classShapeMoniker Id="89d3e036-f8d3-47b1-b32e-a502a72affac" />
+        <classShapeMoniker Id="03d3e5f3-9471-4cd1-a65c-a37bbe4eac8a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.67086450981571); (5.81607443490112 : 6.98693894471683 : JumpStart); (5.93392556509888 : 7.10479007491459 : JumpEnd); (6.0625 : 7.23336450981571); (6.0625 : 6.8125); (6.25 : 7)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataLinkQDataContext/ORDER/ORDER_PAYMENT" />
+      <nodes>
+        <classShapeMoniker Id="2304227f-82e8-4885-9815-199afdb951d9" />
+        <classShapeMoniker Id="bd5f3aeb-5c77-4b70-b071-b45c15aefc5a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

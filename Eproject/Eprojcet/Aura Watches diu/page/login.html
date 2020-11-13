@@ -1,0 +1,39 @@
+        <div class="main-content-wrapper" ng-app="myApp" ng-controller="loginCtrl">
+            <div class="login-register-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            
+                        </div>
+                        <div class="col-lg-6 mb-md--40">
+                            <div class="login-reg-box p-4 bg--2">
+                                <h2 class="heading-secondary mb--30">Login</h2>
+                                <form action="" method="POST" name="Login_form">
+                                    <div class="form__group mb--20">
+                                        <label class="form__label" for="login_email">
+                                            Email address <span>*</span>
+                                        </label>
+                                        <input type="email" class="form__input form__input--2" name="login_email" id="login_email" required ng-model="login_email" placeholder="">
+                                    </div>
+                                    <div class="form__group mb--20">
+                                        <label class="form__label" for="login_password">
+                                            Password <span>*</span>
+                                        </label>
+                                        <input type="password" class="form__input form__input--2" id="login_password" name="login_password" required ng-model="login_password" placeholder="">
+                                    </div>
+                                    <div class="form__group d-flex align-items-center">
+                                        <button type="button" ng-click="login()" class="btn btn-5 btn-style-1 color-1" ng-disabled="Login_form.login_email.$error.required || Login_form.login_email.$error.email || Login_form.login_password.$error.required">Login</button>
+                                        <div class="custom-checkbox ml--20">
+                                            <a href="#!register" class="forgot-pass">Create new account</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

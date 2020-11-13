@@ -1,0 +1,154 @@
+* { margin:0; padding:0;
+    
+}
+
+html, body { height:100%;}/* */
+body { background:url(http://localhost:7655/WebIceCreamSem3/images/imagepage/body-bg.jpg) center top #f26e26; font-family:Tahoma, Geneva, sans-serif; font-size:100%; line-height:1.125em; color:Black; }
+.title {width:560px; height:35px; background:url(http://localhost:7655/WebIceCreamSem3/images/imagepage/bg-title.gif)repeat; border-radius:5px; padding-left:10px; padding-top:5px}
+.titleleftside {width:200; height:35px; background:url(http://localhost:7655/WebIceCreamSem3/images/imagepage/bg-title.gif)repeat; border-radius:5px; padding-left:10px; font-size:18px; margin-left:0px; padding-top:5px; color:#c30000}
+input, select, textarea { font-family:Tahoma, Geneva, sans-serif; font-size:1em;}
+
+.fleft { float:left;}
+.fright { float:right;}
+.clear { clear:both;}
+
+.alignright { text-align:right;}
+.aligncenter { text-align:center;}
+
+.wrapper { width:100%; overflow:hidden; background-color:White; }
+.container { width:100%; color:Blue}
+
+p { margin-bottom:18px;}
+
+/*==================forms====================*/
+
+
+/*==================list====================*/
+ul { list-style:none;}
+
+/*==================other====================*/
+
+.extra-wrap { overflow:hidden; }
+
+
+.alt-top { padding-top:9px;}
+
+/*==================txt, links, lines, titles====================*/
+a {color:#FF0066; 
+outline:none; text-decoration:none
+}
+a:hover{text-decoration:underline;}
+
+h1 { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:60px; line-height:1em; color:#c30000; text-transform:uppercase; font-weight:normal; letter-spacing:-2px;}
+h1 a { color:#c30000; text-decoration:none;}
+h2 { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; color:#c30000; font-size:30px; line-height:1em; font-weight:normal; margin-bottom:12px; letter-spacing:-1px;}
+h3 { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; color:#c30000; font-size:25px; line-height:1em; font-weight:normal; margin-bottom:16px;}
+h4 { font-size:.91em;}
+h5 { font-size:1.33em; color:#c30000; padding-top:10px; margin-bottom:26px;}
+h6 { font-size:1em; color:#e7e7e7;}
+
+
+/*==================boxes====================*/
+.box { background:#c1c8a0; width:100%; }
+.box .inner { padding:15px 30px 10px 17px;}
+
+/*header*/
+#header .row-1 { height:136px; width:100% }
+#header .row-2 { height:390px; background:url(http://localhost:7655/WebIceCreamSem3/images/imagepage/header-bg.png) no-repeat left bottom;}
+#header .row-2.alt { height:278px; background:url(http://localhost:7655/WebIceCreamSem3/images/imagepage/header-bg1.jpg) no-repeat left bottom; width:100%; padding:0; margin:0;}
+#header .row-2 .indent { padding:13px 0 0 13px;}
+
+#header .logo { float:left; padding:40px 0 0 45px;}
+#header .logo em { position:absolute; top:25px; text-transform:uppercase; font-style:normal; font-size:16px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold; padding-left:5px;}
+#header .logo strong { color:#ad0000; font-size:.91em; padding-left:5px;}
+#header .phones { float:right; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:25px; line-height:1em; color:#c30000; padding:43px 48px 0 0; letter-spacing:-1px;}
+
+.header-box { background:url(http://localhost:7655/WebIceCreamSem3/images/imagepage/header-new.gif) no-repeat left top; width:950px; height:364px;}
+.header-box .inner { padding:307px 0 0 2px; }
+
+
+
+#header .nav { width:100%; overflow:hidden;}
+#header .nav li { display:inline;}
+#header .nav li a { display:block; float:left; width:156px; height:55px; line-height:52px; font-size:16px; text-transform:uppercase; font-weight:bold; color:#ba0000; text-decoration:none; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; text-align:center; margin-right:2px; background:url(http://localhost:7655/WebIceCreamSem3/images/imagepage/nav-bg1.png) no-repeat left top;}
+#header .nav li a:hover { background:url(http://localhost:7655/WebIceCreamSem3/images/imagepage/nav-bg2.png) no-repeat left top; color:White}
+#header .nav li a.current { background:url(http://localhost:7655/WebIceCreamSem3/images/imagepage/nav-bg2.png) no-repeat left top;}
+
+/*content*/
+#content { background:url(http://localhost:7655/WebIceCreamSem3/images/imagepage/beige_canvas_pattern.jpg) left top; margin:0 8px;  padding:11px 40px 20px 40px;}
+#content .indent { padding:17px 0 20px 0;}
+
+#content ul { padding-bottom:20px;}
+#content ul li { background:url(http://localhost:7655/WebIceCreamSem3/images/imagepage/bull1.gif) no-repeat left 8px; padding:0 0 0 13px;}
+
+/*footer*/
+#footer { font-family:Arial, Helvetica, sans-serif; padding:28px 40px 35px 40px;}
+#footer a { color:#e3dad2;}
+#footer .nav { text-align:center; padding-bottom:25px;}
+#footer .nav li { display:inline;}
+#footer .nav li a { padding:0 48px 0 45px; color:#e3dad2;}
+
+/*==========================================*/
+.login {width:190px; height:70px; 
+        margin-bottom:10px;padding-left:10px;
+        padding-top:20px; 
+        color:#c1c8a0 ; 
+        border:1px solid;
+        border-radius:5px;
+        background-color:White;
+        font-size:14px;
+       
+        }
+        
+ .titlesidebar {width:200px;
+      height:25px;
+      border:1px solid;
+      background-color:White;
+      border-radius:5px;
+      font-family:Tahoma, Geneva, sans-serif;
+      color:#c1c8a0;
+      font-size:16px;
+      padding-top:10px;     
+     }
+.viewbasket {width:200px;
+             height:130px;
+             border:1px solid ;
+             border-radius:5px;            
+             margin-top:10px;            
+             color:#c1c8a0;
+             background-color:White;           
+}
+
+.contentcart {width:200px; padding-left:10px; font-size:14px; }
+.contentcart a {text-decoration:none    }
+.contentcart a:hover {text-decoration:underline; color:Green    }
+
+.viewflavorside {width:200px;             
+             border:1px solid ;
+             border-radius:5px;              
+             margin-top:10px;            
+             color:#c1c8a0;
+             background-color:White;           
+}
+.viewbookside {width:200px; border:1px solid ;border-radius:5px;        
+             margin-top:10px;          
+             color:#c1c8a0;
+             background-color:White;           
+}
+.contentflavorside {color:Black; padding-left:10px; text-align:center; font-size:14px ; padding-top:10px}
+
+.contentbookside {color:Black; padding-left:12px; text-align:center ; font-size:14px; padding-top:10px}
+.aboutus {}
+.aboutus img { width:200px; height:200px; float:left}
+.aboutus span {padding-left:20px; }
+.wrapfeedback {width:550px; margin-top:50px;}
+.titlefeedback {width:550px; height:35px; background:url(http://localhost:7655/WebIceCreamSem3/images/imagepage/bg-title.gif)repeat; border-radius:5px; padding-top:3px}
+
+
+/*==========================================*/
+.chudehotro                      { height:20px; color:#FFFFFF; text-transform:uppercase; background:#45A07A; font-size:16px; text-align:                                  center; vertical-align:middle; padding-top:4px; border:0px solid #DEDEDE; border-collapse:collapse;                                   border-radius:5px 5px 0 0}
+.hotrotructuyen                  { width:200px; border:1px solid #D5D5D5; margin-top:5px; border-collapse:collapse; border-radius:5px;                                  background:#FFFFFF}
+.noidunghotro                    { margin-top:7px; margin-bottom:10px}
+.tieudehotro                     { color:#45A07A; text-align:center; margin-top:10px;margin-left:60px;font-size:14px;}
+.sdthotro                        { color:#FF0000; text-align:center; margin-left:7px; font-size:14px; margin-bottom:10px}
+.noidunghotro img                {width:55px; height:18px}

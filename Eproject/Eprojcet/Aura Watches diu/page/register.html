@@ -1,0 +1,48 @@
+        <div class="main-content-wrapper" ng-app="myApp" ng-controller="registerCtrl">
+            <div class="login-register-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            
+                        </div>
+                        <div class="col-lg-6 mb-md--40">
+                            <div class="login-reg-box p-4 bg--2">
+                                <h2 class="heading-secondary mb--30">Register</h2>
+                                <form action="" method="POST" name="Register_form">
+                                    <div class="form__group mb--20">
+                                        <label class="form__label" for="register_username">
+                                            Username <span>*</span>
+                                        </label>
+                                        <input type="text" name="register_username" id="register_username" class="form__input form__input--2" required ng-model="register_username">
+                                    </div>
+                                    <div class="form__group mb--20">
+                                        <label class="form__label" for="register_email">
+                                            Email address <span>*</span>
+                                        </label>
+                                        <input type="email" name="register_email" id="register_email" class="form__input form__input--2" required ng-model="register_email">
+                                    </div>
+                                    <div class="form__group mb--20">
+                                        <label class="form__label" for="register_password">
+                                            Password <span>*</span>
+                                        </label>
+                                        <input type="password" name="register_password" id="register_password" class="form__input form__input--2" required ng-model="register_password">
+                                    </div>
+                                    <div class="form__group mb--20">
+                                        <label class="form__label" for="confirm_password">
+                                            Confirm Password <span>*</span>
+                                        </label>
+                                        <input type="password" name="confirm_password" id="confirm_password" class="form__input form__input--2" required ng-model="confirm_password">
+                                    </div>
+                                    <div class="form__group">
+                                        <button type="button" class="btn btn-5 btn-style-2" ng-click="register()" ng-disabled="Register_form.register_username.$error.required || Register_form.register_email.$error.required || Register_form.register_email.$error.email || Register_form.register_password.$error.required || Register_form.confirm_password.$error.required">Register</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
